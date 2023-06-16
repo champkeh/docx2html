@@ -1,0 +1,1137 @@
+<!--docxjs library predefined styles-->
+<style>
+    .docx-wrapper {
+        background: gray;
+        padding: 30px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .docx-wrapper > section.docx {
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+    }
+
+    .docx {
+        color: black;
+    }
+
+    section.docx {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        overflow: hidden;
+    }
+
+    section.docx > article {
+        margin-bottom: auto;
+    }
+
+    .docx table {
+        border-collapse: collapse;
+    }
+
+    .docx table td, .docx table th {
+        vertical-align: top;
+    }
+
+    .docx p {
+        margin: 0pt;
+        min-height: 1em;
+    }
+
+    .docx span {
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+
+    .docx a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+</style>
+<!--docxjs document theme values-->
+<style>
+    .docx {
+        --docx-majorHAnsi-font: Cambria;
+        --docx-minorHAnsi-font: Calibri;
+        --docx-dk1-color: #000000;
+        --docx-lt1-color: #FFFFFF;
+        --docx-dk2-color: #1F497D;
+        --docx-lt2-color: #EEECE1;
+        --docx-accent1-color: #4F81BD;
+        --docx-accent2-color: #C0504D;
+        --docx-accent3-color: #9BBB59;
+        --docx-accent4-color: #8064A2;
+        --docx-accent5-color: #4BACC6;
+        --docx-accent6-color: #F79646;
+        --docx-hlink-color: #0000FF;
+        --docx-folHlink-color: #800080;
+    }
+</style>
+<!--docxjs document styles-->
+<style>
+    .docx span {
+        font-family: Times New Roman;
+    }
+
+    .docx p, p.docx_1 {
+        text-align: justify;
+    }
+
+    .docx p, p.docx_1 span {
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    .docx table, table.docx_10 td {
+        padding-top: 0.00pt;
+        padding-left: 5.40pt;
+        padding-bottom: 0.00pt;
+        padding-right: 5.40pt;
+    }
+
+    p.docx_2 {
+        border-top: 0.75pt solid black;
+        border-left: 0.75pt solid black;
+        border-bottom: 0.75pt solid black;
+        border-right: 0.75pt solid black;
+        background-color: inherit;
+        text-indent: -54.00pt;
+        margin-left: 54.00pt;
+        text-align: justify;
+    }
+
+    p.docx_2 span {
+        font-family: Cambria;
+        min-height: 12.00pt;
+        font-size: 12.00pt;
+    }
+
+    p.docx_3 span {
+        font-family: 宋体;
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_3 {
+        text-align: justify;
+    }
+
+    p.docx_3 span {
+        font-family: 宋体;
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_4 {
+        text-align: left;
+    }
+
+    p.docx_4 span {
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx_5 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_5 {
+        text-align: justify;
+    }
+
+    p.docx_5 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_6 {
+        text-align: left;
+    }
+
+    p.docx_6 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_6 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_7 {
+        border-bottom: 0.75pt solid black;
+        text-align: center;
+    }
+
+    p.docx_7 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_7 span {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    p.docx_8 {
+        margin-top: 5.00pt;
+        margin-bottom: 5.00pt;
+        text-align: left;
+    }
+
+    p.docx_8 span {
+        font-family: 宋体;
+        min-height: 12.00pt;
+        font-size: 12.00pt;
+    }
+
+    p.docx_9 span {
+        font-weight: bold;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx_9 {
+        text-align: left;
+    }
+
+    p.docx_9 span {
+        font-weight: bold;
+    }
+
+    span.docx_12 {
+        font-weight: bold;
+    }
+
+    span.docx_13 {
+        color: #336699;
+        text-decoration: none;
+    }
+
+    span.docx_14 {
+        color: #336699;
+        text-decoration: none;
+    }
+
+    span.docx_15 {
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    span.docx_16 p {
+        text-align: left;
+    }
+
+    span.docx_16 {
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    span.docx_17 {
+        font-family: Arial;
+        color: #000000;
+        min-height: 10.00pt;
+        font-size: 10.00pt;
+        text-decoration: none;
+    }
+
+    span.docx_18 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_18 p {
+        text-align: left;
+    }
+
+    span.docx_18 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_19 {
+        font-weight: bold;
+    }
+
+    span.docx_19 {
+        font-weight: bold;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    span.docx_19 p {
+        text-align: left;
+    }
+
+    span.docx_20 {
+        font-family: 宋体;
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_20 {
+        font-family: 宋体;
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_20 p {
+        text-align: justify;
+    }
+
+    span.docx_21 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_21 p {
+        border-bottom: 0.75pt solid black;
+        text-align: center;
+    }
+
+    span.docx_21 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_22 {
+        font-family: 微软雅黑;
+        font-weight: bold;
+        color: #000000;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+        text-decoration: none;
+    }
+
+    span.docx_23 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_23 {
+        min-height: 9.00pt;
+        font-size: 9.00pt;
+    }
+
+    span.docx_23 p {
+        text-align: justify;
+    }
+
+    p.docx_24 {
+        text-indent: 21.00pt;
+        text-align: justify;
+    }
+
+    p.docx_24 span {
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx_25 {
+        margin-top: 5.00pt;
+        margin-bottom: 5.00pt;
+        text-align: left;
+    }
+
+    p.docx_25 span {
+        font-family: 宋体;
+        min-height: 12.00pt;
+        font-size: 12.00pt;
+    }
+
+    p.docx_26 {
+        text-indent: 21.00pt;
+        text-align: justify;
+    }
+
+    p.docx_26 span {
+        font-family: Calibri;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx_27 {
+        text-align: justify;
+    }
+
+    p.docx_27 span {
+        font-family: Calibri;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx_28 {
+    }
+
+    p.docx_28 span {
+        font-family: 宋体;
+        color: #000000;
+        min-height: 12.00pt;
+        font-size: 12.00pt;
+    }
+</style>
+<!--docxjs document numbering styles-->
+<style>
+    p.docx-num-3-0:before {
+        content: "（" counter(docx-num-3-0, chineseCounting) "）";
+        counter-increment: docx-num-3-0;
+    }
+
+    p.docx-num-3-0 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-0 {
+        counter-reset: docx-num-3-1;
+    }
+
+    p.docx-num-3-1:before {
+        content: "" counter(docx-num-3-1, decimal) "．";
+        counter-increment: docx-num-3-1;
+    }
+
+    p.docx-num-3-1 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-1 {
+        counter-reset: docx-num-3-2;
+    }
+
+    p.docx-num-3-2:before {
+        content: "（" counter(docx-num-3-2, decimal) "）";
+        counter-increment: docx-num-3-2;
+    }
+
+    p.docx-num-3-2 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-2 {
+        counter-reset: docx-num-3-3;
+    }
+
+    p.docx-num-3-3:before {
+        content: "" counter(docx-num-3-3, decimalEnclosedCircleChinese) "";
+        counter-increment: docx-num-3-3;
+    }
+
+    p.docx-num-3-3 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-3 {
+        counter-reset: docx-num-3-4;
+    }
+
+    p.docx-num-3-4:before {
+        content: "" counter(docx-num-3-4, decimal) "）";
+        counter-increment: docx-num-3-4;
+    }
+
+    p.docx-num-3-4 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-4 {
+        counter-reset: docx-num-3-5;
+    }
+
+    p.docx-num-3-5:before {
+        content: "" counter(docx-num-3-5, lower-alpha) "．";
+        counter-increment: docx-num-3-5;
+    }
+
+    p.docx-num-3-5 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-5 {
+        counter-reset: docx-num-3-6;
+    }
+
+    p.docx-num-3-6:before {
+        content: "" counter(docx-num-3-6, lower-alpha) "）";
+        counter-increment: docx-num-3-6;
+    }
+
+    p.docx-num-3-6 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-6 {
+        counter-reset: docx-num-3-7;
+    }
+
+    p.docx-num-3-7:before {
+        content: "" counter(docx-num-3-7, lower-roman) "．";
+        counter-increment: docx-num-3-7;
+    }
+
+    p.docx-num-3-7 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-3-7 {
+        counter-reset: docx-num-3-8;
+    }
+
+    p.docx-num-3-8:before {
+        content: "" counter(docx-num-3-8, lower-roman) "）";
+        counter-increment: docx-num-3-8;
+    }
+
+    p.docx-num-3-8 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-2-0:before {
+        content: "" counter(docx-num-2-0, decimal) ".\9";
+        counter-increment: docx-num-2-0;
+    }
+
+    p.docx-num-2-0 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+    }
+
+    p.docx-num-5-0:before {
+        content: "" counter(docx-num-5-0, decimal) ".\9";
+        counter-increment: docx-num-5-0;
+    }
+
+    p.docx-num-5-0 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.25pt;
+        margin-left: 21.25pt;
+    }
+
+    p.docx-num-4-0:before {
+        content: "（" counter(docx-num-4-0, chineseCounting) "）";
+        counter-increment: docx-num-4-0;
+    }
+
+    p.docx-num-4-0 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-1-0:before {
+        content: "第" counter(docx-num-1-0, chineseCountingThousand) "条    ";
+        counter-increment: docx-num-1-0;
+        font-weight: bold;
+        color: black;
+        min-height: 10.50pt;
+        font-size: 10.50pt;
+    }
+
+    p.docx-num-1-0 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: 21.00pt;
+        margin-left: 0.00pt;
+    }
+
+    p.docx-num-1-0 {
+        counter-reset: docx-num-1-1;
+    }
+
+    p.docx-num-1-1:before {
+        content: "" counter(docx-num-1-1, lower-alpha) ")\9";
+        counter-increment: docx-num-1-1;
+    }
+
+    p.docx-num-1-1 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: -29.45pt;
+    }
+
+    p.docx-num-1-1 {
+        counter-reset: docx-num-1-2;
+    }
+
+    p.docx-num-1-2:before {
+        content: "" counter(docx-num-1-2, lower-roman) ".\9";
+        counter-increment: docx-num-1-2;
+    }
+
+    p.docx-num-1-2 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: -8.45pt;
+    }
+
+    p.docx-num-1-2 {
+        counter-reset: docx-num-1-3;
+    }
+
+    p.docx-num-1-3:before {
+        content: "" counter(docx-num-1-3, decimal) ".\9";
+        counter-increment: docx-num-1-3;
+    }
+
+    p.docx-num-1-3 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 12.55pt;
+    }
+
+    p.docx-num-1-3 {
+        counter-reset: docx-num-1-4;
+    }
+
+    p.docx-num-1-4:before {
+        content: "" counter(docx-num-1-4, lower-alpha) ")\9";
+        counter-increment: docx-num-1-4;
+    }
+
+    p.docx-num-1-4 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 33.55pt;
+    }
+
+    p.docx-num-1-4 {
+        counter-reset: docx-num-1-5;
+    }
+
+    p.docx-num-1-5:before {
+        content: "" counter(docx-num-1-5, lower-roman) ".\9";
+        counter-increment: docx-num-1-5;
+    }
+
+    p.docx-num-1-5 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 54.55pt;
+    }
+
+    p.docx-num-1-5 {
+        counter-reset: docx-num-1-6;
+    }
+
+    p.docx-num-1-6:before {
+        content: "" counter(docx-num-1-6, decimal) ".\9";
+        counter-increment: docx-num-1-6;
+    }
+
+    p.docx-num-1-6 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 75.55pt;
+    }
+
+    p.docx-num-1-6 {
+        counter-reset: docx-num-1-7;
+    }
+
+    p.docx-num-1-7:before {
+        content: "" counter(docx-num-1-7, lower-alpha) ")\9";
+        counter-increment: docx-num-1-7;
+    }
+
+    p.docx-num-1-7 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 96.55pt;
+    }
+
+    p.docx-num-1-7 {
+        counter-reset: docx-num-1-8;
+    }
+
+    p.docx-num-1-8:before {
+        content: "" counter(docx-num-1-8, lower-roman) ".\9";
+        counter-increment: docx-num-1-8;
+    }
+
+    p.docx-num-1-8 {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -21.00pt;
+        margin-left: 117.55pt;
+    }
+
+    .docx-wrapper {
+        counter-reset: docx-num-3-0 docx-num-2-0 docx-num-5-0 docx-num-4-0 docx-num-1-0;
+    }
+</style>
+
+<div class="docx-wrapper">
+    <section class="docx"
+             style="padding: 72pt 90pt; width: 595.3pt; min-height: 841.9pt; column-count: 1; column-gap: 36pt;">
+        <article><p style="text-align: center;"><span id="_GoBack"></span><span
+                style="font-family: 宋体; font-weight: bold; min-height: 14pt; font-size: 14pt; text-decoration: none;">投保须知及声明</span>
+        </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 12pt; font-size: 12pt; text-decoration: none;">一、投保须知</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.8pt; margin-left: 15.8pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">1、</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">投保地区</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span>本保险产品由泰康在线财产保险股份有限公司承保，在中华人民共和国境内（港、澳、台地区除外）开展与互联网交易直接相关的保险业务，不设分支机构，各项保险服务流程均可线上操作。本计划仅限在中国大陆有固定居住地（常住）的人士投保</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">。</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">2.保单形式</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">网上投保为您提供电子保单，根据《中华人民共和国</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">民法典</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">》</span><span>第四百六十九条</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">规定，数据电文是合法的合同表现形式，电子保单与纸质保单具有同等法律效力。您可以登录</span><span
+                    class="docx_14"
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">www.tk.cn</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">自助查询对电子保单的真实性进行验证。</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">3.如实告知</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">您应如实填写投保信息，并就我们提出的询问据实告知,否则我们有权根据《中华人民共和国保险法》第十六条的规定解除保险合同且不承担赔偿责任：</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（1）订立保险合同时，保险公司就保险标的或者被保险人的有关情况提出询问的，投保人应当如实告知。</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（2）投保人故意或者因重大过失未履行前款规定的如实告知义务，足以影响保险公司决定是否同意承保或者提高保险费率的，保险公司有权解除合同。</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（3）投保人故意不履行如实告知义务的，保险公司对于合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。 </span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.4pt; margin-left: 15.45pt; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（4）投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险公司对于合同解除前发生</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">的保险事故，不承担赔偿责任，但退还保险费。</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">4</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">.信息变更</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">如果您的</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">邮件地址、通信地址、邮编、联系电话发生变化，请与本公司客户服务电话95522-3联系，办理变更事宜。</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">5.</span><span
+                    style="font-weight: bold;">信息安全</span></p>
+            <p style="line-height: 1.5; text-align: left;"><span>本公司严格遵守现行的关于个人信息、数据及隐私保护的法律法规，采取充分的技术手段和制度管理，保护您提供给本公司的个人信息、数据和隐私不受到非法的泄露或披露给未获授权的第三方</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">。</span>
+            </p>
+            <p class="docx-num-2-0"><span style="font-weight: bold;">投诉服务及理赔渠道</span></p>
+            <p>
+                <span>如客户发生保险事故需要理赔，请致电泰康在线（95522-3）办理；如发现有关人员有违法、违规行为，或认为自身权益受到侵犯，请您致电泰康在线服务及投诉热线（95522-3）进行咨询</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">7</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">. </span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">偿付能力及风险综合测评</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left; vertical-align: baseline;"><span
+                    style="font-family: 宋体; font-weight: normal; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">我公司最新季度综合偿付能力充足率、风险综合评级评价结果等信息，请登录我公司偿付能力信息披露页面http://channel.tk.cn/page/notice/index.html进行查询。</span>
+            </p>
+            <p style="line-height: 1.5; text-indent: -15.5pt; margin-left: 15.5pt; text-align: left; vertical-align: baseline;">
+                <span style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">8</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">.</span><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">增值税告知</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">本保险产品您所缴纳的保费为含税保费，其中包含</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">6</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">%增值税</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">。</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">9</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">.</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">本产品为组合销售产品，请您仔细阅读产品介绍后购买；</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">1</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">0</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">.</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">理赔入口：“泰康在线保险”微信公众号→“我的服务”→“我要理赔”或泰康在线APP→“我的”→“理赔”→“我要理赔”；</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（1）</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">审核：工作人员会在接收审核材料后审核您的理赔申请，理赔进度请在微信端自助查询；</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">2</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">）</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">寄送资料原件：接到公司寄送原件通知后将理赔资料原件寄送到指定地点，未接到通知无需寄送原件；</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">（</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">3</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">）</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">赔付保险金：理赔结论为给付的案件，保险金一般会在</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">结案</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">完成1个工作日内支付。</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 10.5pt; font-size: 10.5pt; background-color: yellow; text-decoration: none;">11.责任免除：</span>
+            </p>
+            <p class="docx-num-3-0" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">《泰康在线财产保险股份有限公司交通出行意外伤害保险（互联网专属）》</span><span
+                    style="font-family: 宋体; font-weight: bold;">：</span></p>
+            <p class="docx-num-3-1" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">因下列原因造成被保险人身故、伤残的，保险人不承担给付保险金责任：</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">投保人的故意行为；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人自伤或自杀，但被保险人自杀时为无民事行为能力人的除外；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">因被保险人挑衅或故意行为而导致的打斗、被袭击或被谋杀；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人妊娠、流产、分娩、疾病、药物过敏、中暑、食物中毒、猝死；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人未遵医嘱，私自服用、涂用、注射药物；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">核爆炸、核辐射或核污染等放射性污染；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">恐怖袭击；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人犯罪或抗拒依法采取的刑事强制措施；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人从事跳伞、滑翔、赛马、马术表演、赛车、拳击等高风险运动或活动；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人参加任何职业或半职业体育运动或设有奖金、报酬的体育活动；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人因精神错乱或失常而导致的意外；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人非法搭乘交通工具或搭乘未经保险事故发生地相关政府部门登记许可的交通工具；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人严重违反道路交通安全管理部门关于安全驾驶或者承运部门关于安全乘坐的规定；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人乘坐非用于商业营运的指定交通工具的；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人因接受检查、麻醉、整容手术及其它内外科手术、药物治疗等导致的意外；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人因意外伤害事故以外的原因失踪而被法院宣告死亡的。</span>
+            </p>
+            <p class="docx-num-3-1" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人在下列期间遭受意外伤害导致身故、伤残的，保险人不承担给付保险金责任：</span>
+            </p>
+            <p class="docx-num-3-2"><span
+                    style="font-family: 宋体; font-weight: bold;">战争（无论宣战与否）、军事行动、暴动或武装叛乱期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人离开合同约定的交通工具期间；</span></p>
+            <p class="docx-num-3-2"><span style="font-family: 宋体; font-weight: bold;">被保险人酒后驾驶、无合法有效驾驶证驾驶、或驾驶无合法有效行驶证的机动车期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span style="font-family: 宋体; font-weight: bold;">被保险人醉酒或服用、吸食、注射毒品、管制药品的影响期间；被保险人精神和行为障碍（以世界卫生组织颁布的《疾病和有关健康问题的国际统计分类》第十次修订版（ICD-10）为准）期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人被国家机关依法拘禁、采取刑事强制措施或服刑期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span style="font-family: 宋体; font-weight: bold;">被保险人无有效操作证操作施工设备期间；被保险人从事的工作或工种需当地监管部门颁发从业证件而无有效从业证件的工作期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span style="font-family: 宋体; font-weight: bold;">被保险人作为职业运动员在参加训练或比赛期间；被保险人作为军人（含特种兵）、警务人员（含防暴警察）在训练或执行公务期间；被保险人从事采矿业、地下作业、山洞作业、水上作业、2米及以上高处作业的职业活动期间；</span>
+            </p>
+            <p class="docx-num-3-2"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人从事保险单载明的高危工种和职业所对应的工作或活动期间。</span>
+            </p>
+            <p class="docx-num-3-1" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">其他任何不属于本保险责任范围内的责任，保险人也不负责给付。</span>
+            </p>
+            <p></p>
+            <p></p>
+            <p class="docx-num-3-0" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">《泰康在线财产保险股份有限公司</span><span
+                    style="font-family: 宋体; font-weight: bold;">附加交通意外伤害医疗保险（互联网专属）</span><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">》</span><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">：</span></p>
+            <p class="docx-num-0-0" style="line-height: 1.5; text-indent: 21.1pt; margin-left: 0pt; text-align: left;">
+                <span style="font-family: 宋体; font-weight: bold;">因下列原因及情形之一导致被保险人发生医疗费用的，保险人不承担赔偿保险金的责任：</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">未书面告知的既往疾病；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">感染艾滋病病毒或者患艾滋病、精神和行为障碍（以世界卫生组织颁布的《疾病和有关健康问题的国际统计分类》第十次修订版（ICD-10）为准）；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人妊娠（含宫外孕）、流产、分娩（含剖宫产）；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">疗养、康复治疗、心理治疗、美容、矫形、视力矫正手术、牙齿治疗、安装假肢、非意外事故所致的整容手术；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">投保人对被保险人的故意杀害、故意伤害；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人故意犯罪、抗拒依法采取的刑事强制措施；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人醉酒，服用、吸食或者注射毒品；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人挑衅或者故意行为而导致的打斗、被袭击、被谋杀；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人酒后驾驶、无合法有效驾驶证驾驶、或者驾驶无合法有效行驶证的机动车；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人从事下列高风险运动：潜水、跳伞、攀岩、驾驶滑翔机或者滑翔伞、探险、摔跤、武术比赛、特技表演、赛马、赛车；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">被保险人违反道路交通安全管理部门关于安全驾驶或者承运部门关于安全乘坐相关规定；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">战争、军事行动、暴乱、武装叛乱；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">核爆炸、核辐射、核污染等放射性污染；</span></p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">未经医生处方自行购买的药品或非医院药房购买的药品、医生开具的单次处方超过30天部分的药品费用；</span>
+            </p>
+            <p class="docx-num-3-2" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold;">主险合同中列明的“责任免除”事项。</span></p>
+            <p style="line-height: 1.5; text-align: left;"></p>
+            <p class="docx-num-3-0" style="line-height: 1.5; text-indent: 21pt; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">《</span><span
+                    style="font-family: 宋体; font-weight: normal;">泰康在线财产保险股份有限公司附加出行期间财产综合保障保险(互联网专属)</span><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">》</span><span
+                    style="font-family: 宋体; font-weight: bold; text-decoration: none;">：</span></p>
+            <p class="docx-num-0-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">因下列情形</span><span
+                    style="font-family: 宋体; font-weight: normal;">或者原因造成</span><span
+                    style="font-family: 宋体; font-weight: normal;">被保险人</span><span
+                    style="font-family: 宋体; font-weight: normal;">家庭财产</span><span
+                    style="font-family: 宋体; font-weight: normal;">损</span><span
+                    style="font-family: 宋体; font-weight: normal;">失</span><span
+                    style="font-family: 宋体; font-weight: normal;">的，保险人不承担赔偿责任：</span></p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">投保人、被保险人及与被保险人共同居住的人员或被保险人所雇佣的家政服务人员、看管人员的故意或重大过失行为；</span>
+            </p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">战争、敌对行动、军事行为、武装冲突、罢工、骚乱、暴动、恐怖活动；</span>
+            </p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">核辐射、核爆炸、核污染及其他放射性污染；</span></p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">地震及其次生灾害、海啸；</span></p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">行政行为或司法行为；</span></p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">家用电器因使用过度、超电压、短路、断路、漏电、自身发热、烘烤等原因所造成本身的损毁；</span>
+            </p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">保险标的的内在或潜在缺陷、自然磨损、自然损耗，大气（气候或气温）变化、正常水位变化或其他渐变原因，物质本身变化、霉烂、受潮、鼠咬、虫蛀、鸟啄、氧化、锈蚀、渗漏、烘焙；</span>
+            </p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">保险标的因施工、安装、装修不善、建筑物沉降、正常维修、擅自改变房屋结构引起的任何损失或费用</span><span
+                    style="font-family: 宋体; font-weight: normal;">；</span></p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">置放于阳台或露天的财产，或用芦席、稻草、油毛毡、麦秆、芦苇、杆、帆布等材料为外墙、棚顶的简陋罩棚下的财产及罩棚，由于暴风、暴雨所造成的损失；</span>
+            </p>
+            <p class="docx-num-4-0" style="margin-bottom: 7.8pt; text-indent: 0pt;"><span
+                    style="font-family: 宋体; font-weight: normal;">保险标的在保险单载明地址的房屋外遭受的损失，但安装在房屋外的空调器和太阳能热水器等家用电器的室外设备除外；</span>
+            </p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: normal;">（</span><span
+                    style="font-family: 宋体; font-weight: normal;">十一</span><span
+                    style="font-family: 宋体; font-weight: normal;">）</span><span
+                    style="font-family: 宋体; font-weight: normal;">坐落在蓄洪区、行洪区，或在江河岸边、低洼地区及防洪堤以外当地常年警戒水位线以下的保险标的，由于洪水所造成的一切损失</span><span
+                    style="font-family: 宋体; font-weight: normal;">。</span></p>
+            <p class="docx_26 docx-num-0-0"
+               style="line-height: 1.5; text-indent: 0pt; margin-left: 21.25pt; text-align: left; vertical-align: baseline;">
+                <span style="font-family: 宋体; font-weight: bold; min-height: 12pt; font-size: 12pt; text-decoration: none;">二、产品说明：</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品投保人需年满</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">18</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">周岁，被保险人年龄为0（出生满30天（含））-</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">80</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">周岁（含），被保人未满</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">18</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">周岁时，投保人必须为其父母或法定监护人</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品同一出发、到达时间段内同一车次，同一被保险人仅限购买一份；</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品仅承保</span><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">被保险人</span><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">以乘客身份在乘坐保单载明的单次</span><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">火车</span><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">班次期间的保险责任</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品投保成功后，计划出发时间及之后不可退保</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品承保客户在</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">保险期间内</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">乘坐中华人民共和国境内（不含港澳台地区）的</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">火车</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">期间的保险责任（即，自被保人</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">持</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">有效乘坐凭证</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">并</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">进入客运</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">火车</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">时起至被保险人到达有效乘坐凭证载明的终点离开客运</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">火车车厢</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">时止，对转</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">乘</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">期间的乘坐其他交通工具的除外），若</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">保险期间内车次</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">结束，则保险责任终止；</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品火车意外伤害医疗保险责任单次免赔额200元</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">，若被保险人发生的属于本附加合同保险责任范围内的医疗费用未从社会基本医疗保险、公费医疗、新型农村合作医疗、非本公司的商业性费用补偿型医疗保险、其他政府机构或者社会福利机构获得补偿，赔偿比例为80%；若被保险人发生的属于本附加合同保险责任范围内的医疗费用已从社会基本医疗保险、公费医疗、新型农村合作医疗、非本公司的商业性费用补偿型医疗保险、其他政府机构或者社会福利机构获得补偿，赔偿比例为100%；</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">产品意外</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">医疗相关保障</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">医院等级</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">限定为中华人民共和国境内合法经营的二级以上（含二级）公立医院或保险公司认可的其他医疗机构（不含国际医疗及特需部)；</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品无等待期；</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">家庭财产损失保险金—房屋主体保险责任： </span>
+            </p>
+            <p class="docx-num-0-0" style="text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">（1）本产品家庭财产损失保险金仅承保地址为被保险人名下且在保险期间内首次出险的房屋地址，出险后地址不可更改，该地址的房屋需为城镇地区的，非自建的，钢筋混凝土或砖混结构的商品房住宅房产，该房产必须为被保险人本人所有。商品房住宅指经政府有关部门批准，由房地产公司开发建设，通过房产交易中心所购买的住宅类建筑； </span>
+            </p>
+            <p class="docx-num-0-0" style="text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">（2）不承保房屋用途为商用或实际用途为办公性质的房屋； </span>
+            </p>
+            <p class="docx-num-0-0" style="text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">（3）不承保农村地区各种住宅房产； </span>
+            </p>
+            <p class="docx-num-0-0" style="text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">（4）</span><span
+                    style="font-family: 宋体; font-weight: bold; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品家庭财产损失保险金-房屋主体保险责任每次事故绝对免赔额1000元</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">未成年人赔偿限额：如果以未成年人死亡为给付责任的保险金额超出中国保监会所规定的限额，保险公司就超过限额部分不承担保险金给付责任。对于被保险人不满10周岁的，不得超过人民币20万元或保单所载金额。对于被保险人已满10周岁但未满18周岁的，不得超过人民币50万元或保单所载金额。航空意外死亡保险金额、重大自然灾害意外死亡保险金额不受此限（死亡身故最大可能损失限额限定）</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品仅限在中国大陆有固定居住地的人士投保</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">；</span></p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">本产品仅保障保单载明的中华人民共和国境内（不含港澳台地区）的火车，若被保险人实际乘坐的车次与保单约定的不符，保险人不承担责任。</span>
+            </p>
+            <p class="docx-num-5-0"
+               style="text-indent: -21.25pt; margin-left: 21.25pt; text-align: left; vertical-align: middle;"><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none;">本产品适用条款</span><span
+                    style="font-family: 宋体; min-height: 10.5pt; font-size: 10.5pt;">《泰康在线财产保险股份有限公司交通出行意外伤害保险（互联网专属）》（注册号：C00019932312021120717553）；《泰康在线财产保险股份有限公司附加交通意外伤害医疗保险（互联网专属）》（注册号：C00019932522021120717563）；《</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">泰康在线财产保险股份有限公司</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">附加出行期间财产综合保障保险(互联网专属)</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">》</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">（</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">注册号：C00019932122023021426353</span><span
+                    style="font-family: 宋体; font-style: normal; text-transform: none; min-height: 10.5pt; font-size: 10.5pt; text-decoration: none; background-color: inherit;">）</span><span
+                    style="font-family: 宋体; color: rgb(0, 0, 0); min-height: 10.5pt; font-size: 10.5pt;">。</span></p>
+            <p style="line-height: 1.5; text-align: left;"></p>
+            <p style="line-height: 1.5; text-align: left;"><span
+                    style="font-family: 宋体; font-weight: bold; min-height: 12pt; font-size: 12pt; text-decoration: none;">三、投保声明</span>
+            </p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">1、</span><span style="font-family: 宋体;">本人已完整阅读并了解以上投保须知及投保险种的保险条款，尤其是对其中免除保险人责任的条款或约定（包括但不限于责任免除、投保人被保险人义务、保险金申请与给付等），本人已充分理解并接受上述内容，同意以此作为订立保险合同的依据。</span>
+            </p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">2、投保时，本投保人已就该产品的保障内容以及保险金额等向被保险人/被保人监护人进行了明确说明，并征得其同意。</span>
+            </p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">3</span><span style="font-family: 宋体;">、投保单中所填写的内容均属实，如有隐瞒或不实告知，你公司有权解除保险合同，对于合同解除前发生的任何事故，你公司可不承担任何责任。</span>
+            </p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">4</span><span style="font-family: 宋体;">、本人已知晓任何年龄在18周岁以下的被保险人，如果其以死亡为给付责任的保险金额（包括在所有商业保险公司所购买的保险）超出中国保监会所规定的限额（0周岁-9周岁（含）人民币20万元；10周岁-17周岁（含），人民币50万元，航空意外死亡保险金不受此限），保险人就超过限额部分不承担保险金给付责任</span><span
+                    style="font-family: 宋体;">。</span></p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">5</span><span style="font-family: 宋体;">、本人同意贵公司为本保险及与本保险之相关服务的目的收集本人的个人资料，无论该资料是从本投保申请或其他地方所获取。本人理解贵公司为提升保险服务质量，可能会与第三方机构、组织或个人合作，此类合作可能需要使用本人的个人资料。在此理解下， 本人同意并授权贵公司及与贵公司存在合作关系的机构、组织或个人将收集的本人的个人资料用于：（1）该保险的投保审核；（2）该保险的理赔；（3）提供与该保险有关之服务；（4）与本人联络</span><span
+                    style="font-family: 宋体;">。</span></p>
+            <p style="line-height: 1.5;"><span style="font-family: 宋体;">6</span><span style="font-family: 宋体;">、本人同意你公司通过手机（包括手机短信）、E-mail适时提供保险信息服务</span><span
+                    style="font-family: 宋体;">；</span></p>
+            <p><span style="font-family: 宋体;">7、</span><span>电子发票送达方式：本产品提供电子发票，其法律效力、基本用途、基本使用规定等与税务机关监制的增值税普通发票相同，如您需要发票，您可以关注微信公众号[泰康在线保险]或者下载APP：https://ah9eca.jmlk.co/AAGN自助开具发票。如您需纸质发票，请在保单生效后致电客服电话：95522-3，您需提供寄送地址以便我司向您寄送，相应的快递费用将由您承担。</span><span
+                    style="font-family: 宋体; text-decoration: none;">  </span></p>
+            <p></p>
+            <p style="line-height: 1.5; text-align: left;"></p></article>
+    </section>
+</div>

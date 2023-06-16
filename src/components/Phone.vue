@@ -1,7 +1,7 @@
-<script setup>
-defineProps({
-  content: String
-})
+<script lang="ts" setup>
+defineProps<{
+  content: string
+}>()
 </script>
 
 <template>
@@ -16,7 +16,7 @@ defineProps({
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #FFFAF6;
+  background-color: #fffaf6;
 }
 #wrapper {
   position: absolute;
@@ -45,22 +45,22 @@ body {
 
 .phone.view_3 {
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  box-shadow: 0px 3px 0 #BBB, 0px 4px 0 #BBB, 0px 5px 0 #BBB, 0px 7px 0 #BBB, 0px 10px 20px #666;
+  box-shadow: 0 3px 0 #bbb, 0 4px 0 #bbb, 0 5px 0 #bbb, 0 7px 0 #bbb, 0 10px 20px #666;
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   #wrapper {
     transform: scale(0.8, 0.8);
   }
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
   #wrapper {
     transform: scale(0.6, 0.6);
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   #wrapper {
     transform: scale(0.4, 0.4);
   }
