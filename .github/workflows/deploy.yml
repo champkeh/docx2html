@@ -6,6 +6,15 @@ on:
     branches: master
 
 jobs:
+  install:
+    name: Install Pnpm
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
