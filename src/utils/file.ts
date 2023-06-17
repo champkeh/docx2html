@@ -1,7 +1,7 @@
 /**
  * 下载文件
- * @param {Blob} blob
- * @param {string} name
+ * @param {Blob} blob 文件对象
+ * @param {string} name 文件名
  */
 export function downloadBlob(blob: Blob, name = 'file.txt') {
   // Convert your blob into a Blob URL (a special url that points to an object in the browser's memory)
@@ -29,4 +29,50 @@ export function downloadBlob(blob: Blob, name = 'file.txt') {
 
   // Remove link from body
   document.body.removeChild(link)
+}
+
+/**
+ * 下载 html 内容
+ * @param html html内容
+ * @param filename 文件名
+ */
+export function downloadHtml(html: string, filename = 'index.html') {
+  const blob = new Blob([html], { type: 'text/html' })
+  downloadBlob(blob, filename)
+}
+
+/**
+ * 合并html，解决样式隔离
+ * @param htmls
+ * @param title
+ */
+export function mergeHtml(htmls: string[], title = '') {
+  const html = `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>${title}</title>
+</head>
+<body>
+<script>
+const htmls = ${JSON.stringify(htmls)}
+htmls.forEach(html => {
+    const article = document.createElement('article')
+    const shadow = article.attachShadow({mode: 'open'})
+    shadow.innerHTML = html
+    document.body.append(article)
+})
+</script>
+</body>
+</html>
+`
+  return html
+}
+
+/**
+ * html 转换器
+ * @param rawHtml docx 生成的原始 html
+ */
+export function htmlTransformer(rawHtml: string): string {
+  return rawHtml
 }

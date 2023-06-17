@@ -1,28 +1,36 @@
 import { defineStore } from 'pinia'
-import { reactive } from 'vue'
-import { downloadBlob } from '@/utils/file'
+import { computed, reactive } from 'vue'
+import { downloadHtml, htmlTransformer, mergeHtml } from '@/utils/file'
 import type { IDocItem } from './types'
+import type { Ref } from 'vue'
 
 export const useDocStore = defineStore('doc', () => {
   const docs = reactive<IDocItem[]>([])
 
   /**
-   * 导出 html 文件
+   * 合并导出
    */
-  function exportHtml(doc: IDocItem) {
-    if (!doc.html) return
-
-    const blob = new Blob([doc.html], { type: 'text/html' })
-    downloadBlob(blob, doc.file.name.replace(/\.docx?$/, '.html'))
+  function mergeExport() {
+    const html = mergeHtml(htmls.value, 'ShadowDOM合并导出')
+    downloadHtml(html)
   }
 
-  function exportAll() {
-    docs.forEach((doc) => exportHtml(doc))
-  }
+  /**
+   * 文档对应的 html 数组
+   */
+  const htmls: Ref<string[]> = computed(() =>
+    docs.filter((doc) => !!doc.html).map((doc) => htmlTransformer(doc.html!))
+  )
+
+  /**
+   * 已完成选择的 docs
+   */
+  const renderedDocs: Ref<IDocItem[]> = computed(() => docs.filter((doc) => !!doc.html))
 
   return {
     docs,
-    exportHtml,
-    exportAll
+    renderedDocs,
+    mergeExport,
+    htmls
   }
 })

@@ -7,10 +7,13 @@ const docStore = useDocStore()
 
 function onFileChange(e) {
   const files: FileList = e.target.files || e.dataTransfer.files
-  docStore.docs.push(...Array.from(files).map((file) => ({ id: uuid(), file })))
+  docStore.docs.push(
+    ...Array.from(files).map((file) => ({
+      id: uuid(),
+      file
+    }))
+  )
 }
-
-const docs = docStore.docs
 </script>
 
 <template>
@@ -37,7 +40,13 @@ const docs = docStore.docs
           <div class="dropdown-item">
             <div class="form-check">
               <label class="form-check-name">
-                <input type="checkbox" v-model="options[k]" class="form-check-input" />
+                <input
+                  v-if="typeof options[k] === 'boolean'"
+                  type="checkbox"
+                  v-model="options[k]"
+                  class="form-check-input"
+                />
+                <input v-else type="text" class="form-control" v-model="options[k]" />
                 {{ k }}
               </label>
             </div>
@@ -48,8 +57,8 @@ const docs = docStore.docs
     <div class="flex-grow-1"></div>
     <button
       class="btn btn-success px-4"
-      :disabled="docs.length === 0"
-      @click="docStore.exportAll()"
+      :disabled="docStore.docs.length === 0"
+      @click="docStore.mergeExport()"
     >
       Export
     </button>
