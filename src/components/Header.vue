@@ -55,6 +55,7 @@ function onFileChange(e) {
       </ul>
     </div>
     <div class="flex-grow-1"></div>
+    <span class="mx-2">size: ~{{ docStore.size }}</span>
     <button
       class="btn btn-success px-4"
       :disabled="docStore.docs.length === 0"

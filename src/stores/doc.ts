@@ -23,6 +23,25 @@ export const useDocStore = defineStore('doc', () => {
   )
 
   /**
+   * 文档大小
+   */
+  const size = computed(() => {
+    if (htmls.value.length === 0) return 'null'
+    const html = mergeHtml(htmls.value, 'ShadowDOM合并导出')
+
+    const bytes = html.length
+    if (bytes < 10 ** 3) {
+      return `${bytes}字节`
+    } else if (bytes < 10 ** 6) {
+      return `${Math.floor(bytes / 10 ** 3)}kb`
+    } else if (bytes < 10 ** 9) {
+      return `${(bytes / 10 ** 6).toFixed(1)}Mb`
+    } else {
+      return `${(bytes / 10 ** 9).toFixed(1)}Gb`
+    }
+  })
+
+  /**
    * 已完成选择的 docs
    */
   const renderedDocs: Ref<IDocItem[]> = computed(() => docs.filter((doc) => !!doc.html))
@@ -31,6 +50,7 @@ export const useDocStore = defineStore('doc', () => {
     docs,
     renderedDocs,
     mergeExport,
-    htmls
+    htmls,
+    size
   }
 })
