@@ -28,6 +28,9 @@ function preview() {
       url.value = import.meta.env.VITE_DOMAIN + res.key
       modalIsOpen.value = true
     })
+    .catch((e) => {
+      alert(e.message)
+    })
     .finally(() => {
       loading.value = false
     })
