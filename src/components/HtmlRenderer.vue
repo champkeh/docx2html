@@ -7,7 +7,7 @@ const props = defineProps<{
 const elRef = ref<HTMLElement>()
 onMounted(() => {
   const shadow = elRef.value?.attachShadow({ mode: 'open' })
-  shadow.innerHTML = props.html
+  shadow!.innerHTML = props.html
 })
 
 watch(

@@ -5,7 +5,7 @@ import { options } from '@/stores/options'
 
 const docStore = useDocStore()
 
-function onFileChange(e) {
+function onFileChange(e: any) {
   const files: FileList = e.target.files || e.dataTransfer.files
   docStore.docs.push(
     ...Array.from(files).map((file) => ({
