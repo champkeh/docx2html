@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { computed, reactive } from 'vue'
-import { downloadHtml, htmlTransformer, mergeHtml } from '@/utils/file'
+import { downloadHtml, htmlTransformer, mergeHtml, uploadFile } from '@/utils/file'
 import type { IDocItem } from './types'
 import type { Ref } from 'vue'
 
@@ -46,11 +46,22 @@ export const useDocStore = defineStore('doc', () => {
    */
   const renderedDocs: Ref<IDocItem[]> = computed(() => docs.filter((doc) => !!doc.html))
 
+  /**
+   * 预览，上传到七牛云
+   */
+  function preview() {
+    const token = import.meta.env.VITE_QINIU_TOKEN
+    const html = mergeHtml(htmls.value, 'ShadowDOM合并导出')
+    const file = new File([html], 'ShadowDOM合并导出.html', { type: 'text/html' })
+    return uploadFile(file, token)
+  }
+
   return {
     docs,
     renderedDocs,
     mergeExport,
     htmls,
-    size
+    size,
+    preview
   }
 })

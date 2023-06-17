@@ -2,6 +2,8 @@
 import { v4 as uuid } from 'uuid'
 import { useDocStore } from '@/stores/doc'
 import { options } from '@/stores/options'
+import { ref } from 'vue'
+import Modal from '@/components/Modal.vue'
 
 const docStore = useDocStore()
 
@@ -13,6 +15,22 @@ function onFileChange(e: any) {
       file
     }))
   )
+}
+
+const loading = ref(false)
+const url = ref('')
+const modalIsOpen = ref(false)
+function preview() {
+  loading.value = true
+  docStore
+    .preview()
+    .then((res) => {
+      url.value = import.meta.env.VITE_DOMAIN + res.key
+      modalIsOpen.value = true
+    })
+    .finally(() => {
+      loading.value = false
+    })
 }
 </script>
 
@@ -63,5 +81,20 @@ function onFileChange(e: any) {
     >
       Export
     </button>
+    <button
+      class="btn btn-secondary px-4"
+      :disabled="docStore.docs.length === 0 || loading"
+      @click="preview"
+    >
+      <span
+        v-if="loading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      Preview
+    </button>
   </div>
+
+  <Modal v-model:show="modalIsOpen" :url="url" />
 </template>

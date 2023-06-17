@@ -1,3 +1,5 @@
+import * as qiniu from 'qiniu-js'
+
 /**
  * 下载文件
  * @param {Blob} blob 文件对象
@@ -51,6 +53,10 @@ export function mergeHtml(htmls: string[], title = '') {
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"/>
     <title>${title}</title>
 </head>
 <body>
@@ -74,5 +80,26 @@ htmls.forEach(html => {
  * @param rawHtml docx 生成的原始 html
  */
 export function htmlTransformer(rawHtml: string): string {
-  return rawHtml
+  // 修改 docx 的 padding 样式
+  const patch = `<style>section.docx {padding: 10pt !important;}</style>`
+  return patch + rawHtml
+}
+
+/**
+ * 上传文件到七牛云
+ * @param file
+ * @param token
+ */
+export function uploadFile(file: File, token: string): Promise<{ key: string; hash: string }> {
+  return new Promise((resolve, reject) => {
+    const observable = qiniu.upload(file, null, token)
+    observable.subscribe({
+      error(err) {
+        reject(err)
+      },
+      complete(res) {
+        resolve(res)
+      }
+    })
+  })
 }

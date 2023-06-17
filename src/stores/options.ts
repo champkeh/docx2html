@@ -2,10 +2,10 @@ import { reactive } from 'vue'
 
 const defaultOptions = {
   // enables rendering of wrapper around document content
-  inWrapper: true,
+  inWrapper: false,
 
   // disables rendering width of page
-  ignoreWidth: false,
+  ignoreWidth: true,
 
   // disables rendering height of page
   ignoreHeight: false,
