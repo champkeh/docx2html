@@ -4,6 +4,7 @@ import { useDocStore } from '@/stores/doc'
 import { options } from '@/stores/options'
 import type { IDocItem } from '@/stores/types'
 import HtmlRenderer from '@/components/HtmlRenderer.vue'
+import Loading from '@/components/Loading.vue'
 
 const docStore = useDocStore()
 
@@ -33,10 +34,8 @@ function renderFile(doc: IDocItem) {
 </script>
 
 <template>
-  <div class="flex-grow-1 d-flex flex-column align-items-center overflow-auto">
-    <div v-if="loading" class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
+  <div class="flex-grow-1 d-flex flex-column align-items-center overflow-auto position-relative">
+    <Loading :show="loading" />
     <HtmlRenderer v-for="doc in docStore.renderedDocs" :key="doc.id" :html="doc.html!" />
   </div>
   <div class="visually-hidden" ref="_tmpContainerRef"></div>

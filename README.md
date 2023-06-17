@@ -1,6 +1,6 @@
 # docx2html
 
-docx文档转html的工具
+docx转html的一个工具，PC和Mobile完美适配，多文档合并
 
 ## Roadmap
 - [ ] 生成二维码供手机端真机预览

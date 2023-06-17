@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 const props = defineProps<{
   html: string
 }>()
@@ -9,6 +9,15 @@ onMounted(() => {
   const shadow = elRef.value?.attachShadow({ mode: 'open' })
   shadow.innerHTML = props.html
 })
+
+watch(
+  () => props.html,
+  (html) => {
+    if (elRef.value?.shadowRoot) {
+      elRef.value!.shadowRoot.innerHTML = html
+    }
+  }
+)
 </script>
 
 <template>
