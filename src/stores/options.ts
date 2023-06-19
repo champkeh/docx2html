@@ -35,9 +35,7 @@ const defaultOptions = {
   showChanges: false,
 
   // enables additional logging
-  debug: false,
-
-  className: 'docx'
+  debug: false
 }
 
 export const options = reactive(defaultOptions)

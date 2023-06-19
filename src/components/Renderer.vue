@@ -25,7 +25,8 @@ const _tmpContainerRef = ref<HTMLElement | null>(null)
 function renderFile(doc: IDocItem) {
   return window.docx
     .renderAsync(doc.file, _tmpContainerRef.value!, null, {
-      ...options
+      ...options,
+      className: doc.className
     })
     .then(() => {
       return _tmpContainerRef.value!.innerHTML

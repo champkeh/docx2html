@@ -12,7 +12,8 @@ function onFileChange(e: any) {
   docStore.docs.push(
     ...Array.from(files).map((file) => ({
       id: uuid(),
-      file
+      file,
+      className: 'docx' + uuid().replace(/[^a-z0-9]/gi, '')
     }))
   )
 }

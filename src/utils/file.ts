@@ -1,4 +1,5 @@
 import * as qiniu from 'qiniu-js'
+import { IDocItem } from '@/stores/types'
 
 /**
  * 下载文件
@@ -48,8 +49,8 @@ export function downloadHtml(html: string, filename = 'index.html') {
  * @param htmls
  * @param title
  */
-export function mergeHtml(htmls: string[], title = '') {
-  const html = `<!DOCTYPE html>
+export function mergeHtml(htmls: string[], title = 'docx') {
+  return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -60,29 +61,23 @@ export function mergeHtml(htmls: string[], title = '') {
     <title>${title}</title>
 </head>
 <body>
-<script>
-const htmls = ${JSON.stringify(htmls)}
-htmls.forEach(html => {
-    const article = document.createElement('article')
-    const shadow = article.attachShadow({mode: 'open'})
-    shadow.innerHTML = html
-    document.body.append(article)
-})
-</script>
+${htmls.join('')}
 </body>
 </html>
 `
-  return html
 }
 
 /**
  * html 转换器
  * @param rawHtml docx 生成的原始 html
+ * @param doc
  */
-export function htmlTransformer(rawHtml: string): string {
-  // 修改 docx 的 padding 样式
-  const patch = `<style>section.docx {padding: 10pt !important;}</style>`
-  return patch + rawHtml
+export function htmlTransformer(rawHtml: string, doc: IDocItem): string {
+  return `<!-- ${doc.file.name} -->
+<!--修改 docx 的默认 padding 样式--><style>section.${doc.className} {padding: 10pt !important;}</style>${rawHtml}
+
+
+`
 }
 
 /**

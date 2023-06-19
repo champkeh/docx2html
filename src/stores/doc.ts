@@ -19,7 +19,7 @@ export const useDocStore = defineStore('doc', () => {
    * 文档对应的 html 数组
    */
   const htmls: Ref<string[]> = computed(() =>
-    docs.filter((doc) => !!doc.html).map((doc) => htmlTransformer(doc.html!))
+    docs.filter((doc) => !!doc.html).map((doc) => htmlTransformer(doc.html!, doc))
   )
 
   /**
