@@ -62,13 +62,7 @@ function preview() {
           <div class="dropdown-item">
             <div class="form-check">
               <label class="form-check-name">
-                <input
-                  v-if="typeof options[k] === 'boolean'"
-                  type="checkbox"
-                  v-model="options[k]"
-                  class="form-check-input"
-                />
-                <input v-else type="text" class="form-control" v-model="options[k]" />
+                <input type="checkbox" v-model="options[k]" class="form-check-input" />
                 {{ k }}
               </label>
             </div>
