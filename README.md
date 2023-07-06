@@ -1,6 +1,8 @@
 # docx2html
 
-docx转html的一个工具，PC和Mobile完美适配，支持多文档合并
+docx 转 html 的一个工具，PC和Mobile完美适配，支持多文档合并
+
+> 基于魔改的 https://github.com/champkeh/docxjs
 
 ## Roadmap
 - [x] 生成二维码供手机端真机预览
