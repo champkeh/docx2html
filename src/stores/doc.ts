@@ -17,7 +17,7 @@ export const useDocStore = defineStore('DocStore', () => {
 
     const iframe = IFrame.query('iframe')
     // 取第一个文档的title
-    const title = docStore.docs[0].file.name
+    const title = docs[0].file.name
     const html = iframe.output(title)
 
     const file = new File([html], title, { type: 'text/html' })
