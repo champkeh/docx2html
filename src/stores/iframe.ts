@@ -55,6 +55,7 @@ export class IFrame {
 
     initialize() {
         this.reset()
+        this.appendStyleText(`html,body {margin: 0}`)
     }
 
     reset() {

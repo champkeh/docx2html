@@ -1,15 +1,12 @@
 <script lang="ts" setup>
 import Header from './components/Header.vue'
+import DocList from "@/components/DocList.vue";
 </script>
 
 <template>
-  <Header />
-  <iframe id="iframe" frameborder="0"></iframe>
+  <Header/>
+  <div class="flex-grow-1 d-flex">
+    <DocList/>
+    <iframe class="flex-grow-1" id="iframe" frameborder="0"></iframe>
+  </div>
 </template>
-
-<style>
-#iframe {
-  flex: 1;
-  width: 100%;
-}
-</style>
