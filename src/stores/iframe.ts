@@ -4,7 +4,7 @@ export class IFrame {
     // 类的所有实例
     private static instances: Map<string, IFrame> = new Map()
 
-    private readonly iframeEl: HTMLIFrameElement
+    private readonly iframeEl?: HTMLIFrameElement
 
 
     /**
@@ -32,7 +32,7 @@ export class IFrame {
             return instance
         }
 
-        const iframe = document.querySelector(`iframe#${id}`)
+        const iframe = document.querySelector(`iframe#${id}`) as HTMLIFrameElement
         if (!iframe) {
             throw new Error(`当前页面不存在id为"${id}"的iframe元素`)
         }
@@ -46,11 +46,11 @@ export class IFrame {
     }
 
     private get head() {
-        return this.iframeEl.contentDocument.head
+        return this.iframeEl!.contentDocument!.head
     }
 
     private get body() {
-        return this.iframeEl.contentDocument.body
+        return this.iframeEl!.contentDocument!.body
     }
 
     initialize() {
@@ -99,16 +99,16 @@ export class IFrame {
         this.append(styleContainer.childNodes, 'head')
     }
 
-    appendElemsToHead(elems: NodeListOf<ChildNode>) {
-        Array.from(elems).forEach(elem => this.appendElemToHead(elem))
+    appendElemsToHead(elems: ChildNode[]) {
+        elems.forEach(elem => this.appendElemToHead(elem))
     }
 
     appendElemToHead(elem: ChildNode) {
         this.head.appendChild(elem)
     }
 
-    appendElemsToBody(elems: NodeListOf<ChildNode>) {
-        Array.from(elems).forEach(elem => this.appendElemToBody(elem))
+    appendElemsToBody(elems: ChildNode[]) {
+        elems.forEach(elem => this.appendElemToBody(elem))
     }
 
     appendElemToBody(elem: ChildNode) {
@@ -116,15 +116,18 @@ export class IFrame {
     }
 
     append(elems: ChildNode | NodeListOf<ChildNode>, to: 'head' | 'body' = 'body') {
-        if (getType(elems) !== 'NodeList') {
-            elems = [elems]
+        const nodes: ChildNode[] = []
+        if (isNodeList(elems)) {
+            elems.forEach(elem => nodes.push(elem))
+        } else {
+            nodes.push(elems)
         }
         switch (to) {
             case 'head':
-                this.appendElemsToHead(elems)
+                this.appendElemsToHead(nodes)
                 break
             case 'body':
-                this.appendElemsToBody(elems)
+                this.appendElemsToBody(nodes)
                 break
         }
     }
@@ -160,4 +163,8 @@ ${this.body.innerHTML}
 </html>
 `
     }
+}
+
+function isNodeList(node: ChildNode | NodeListOf<ChildNode>): node is NodeListOf<ChildNode> {
+    return getType(node) === 'NodeList'
 }

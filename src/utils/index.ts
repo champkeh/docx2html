@@ -26,6 +26,6 @@ export function renderDoc(doc: IDocItem, hintCls?: string) {
         })
 }
 
-export function getType(obj) {
+export function getType(obj: any) {
     return Object.prototype.toString.call(obj).slice(8, -1)
 }
