@@ -1,5 +1,4 @@
 import * as qiniu from 'qiniu-js'
-import { IDocItem } from '@/stores/types'
 
 /**
  * 下载文件
@@ -44,41 +43,6 @@ export function downloadHtml(html: string, filename = 'index.html') {
   downloadBlob(blob, filename)
 }
 
-/**
- * 合并html，解决样式隔离
- * @param htmls
- * @param title
- */
-export function mergeHtml(htmls: string[], title = 'docx') {
-  return `<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="renderer" content="webkit"/>
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"/>
-    <title>${title}</title>
-</head>
-<body>
-${htmls.join('')}
-</body>
-</html>
-`
-}
-
-/**
- * html 转换器
- * @param rawHtml docx 生成的原始 html
- * @param doc
- */
-export function htmlTransformer(rawHtml: string, doc: IDocItem): string {
-  return `<!-- ${doc.file.name} -->
-<!--修改 docx 的默认 padding 样式--><style>section.${doc.className} {padding: 10pt !important;}</style>${rawHtml}
-
-
-`
-}
 
 /**
  * 上传文件到七牛云

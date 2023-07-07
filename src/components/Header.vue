@@ -36,8 +36,14 @@ async function reload() {
     const doc = docStore.docs[i]
     const className = `docx-${i}`
     const [body, style] = await renderDoc(doc, className)
+
+    // 样式
+    iframe.appendComment(doc.file.name, 'head')
     iframe.appendMediaQueryStyle(className)
     iframe.append(style.childNodes, 'head')
+
+    // 文档
+    iframe.appendComment(doc.file.name, 'body')
     iframe.append(body.childNodes, 'body')
   }
 }
@@ -109,7 +115,6 @@ function preview() {
       </ul>
     </div>
     <div class="flex-grow-1"></div>
-<!--    <span class="mx-2">size: ~{{ docStore.size }}</span>-->
     <button
         class="btn btn-success px-4"
         :disabled="docStore.docs.length === 0"

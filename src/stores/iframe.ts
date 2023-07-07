@@ -138,6 +138,18 @@ export class IFrame {
         this.append(style, 'head')
     }
 
+    appendComment(comment: string, to: 'head' | 'body' = 'body') {
+        const commentNode = document.createComment(comment)
+        switch (to) {
+            case "head":
+                this.appendElemToHead(commentNode)
+                break
+            case "body":
+                this.appendElemToBody(commentNode)
+                break
+        }
+    }
+
 
 
     /**
