@@ -1,21 +1,21 @@
 import { reactive } from 'vue'
 
 const defaultOptions = {
-  ignoreHeight: false,
+  ignoreHeight: true,
   ignoreWidth: false,
   ignoreFonts: false,
   breakPages: true,
   debug: true,
-  experimental: true,
+  experimental: false,
   // className: 'docx',
   inWrapper: true,
   trimXmlDeclaration: true,
   ignoreLastRenderedPageBreak: true,
-  renderHeaders: true,
-  renderFooters: true,
-  renderFootnotes: true,
-  renderEndnotes: true,
-  useBase64URL: false,
+  renderHeaders: false,
+  renderFooters: false,
+  renderFootnotes: false,
+  renderEndnotes: false,
+  useBase64URL: true,
   useMathMLPolyfill: false,
   renderChanges: false,
   showChanges: false

@@ -1,19 +1,11 @@
 import { defineStore } from 'pinia'
 import { computed, reactive } from 'vue'
-import { downloadHtml, htmlTransformer, mergeHtml, uploadFile } from '@/utils/file'
+import { htmlTransformer, mergeHtml, uploadFile } from '@/utils/file'
 import type { IDocItem } from './types'
 import type { Ref } from 'vue'
 
-export const useDocStore = defineStore('doc', () => {
+export const useDocStore = defineStore('DocStore', () => {
   const docs = reactive<IDocItem[]>([])
-
-  /**
-   * 合并导出
-   */
-  function mergeExport() {
-    const html = mergeHtml(htmls.value, 'ShadowDOM合并导出')
-    downloadHtml(html)
-  }
 
   /**
    * 文档对应的 html 数组
@@ -41,10 +33,6 @@ export const useDocStore = defineStore('doc', () => {
     }
   })
 
-  /**
-   * 已完成选择的 docs
-   */
-  const renderedDocs: Ref<IDocItem[]> = computed(() => docs.filter((doc) => !!doc.html))
 
   /**
    * 预览，上传到七牛云
@@ -58,8 +46,6 @@ export const useDocStore = defineStore('doc', () => {
 
   return {
     docs,
-    renderedDocs,
-    mergeExport,
     htmls,
     size,
     preview

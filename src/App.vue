@@ -1,9 +1,15 @@
 <script lang="ts" setup>
 import Header from './components/Header.vue'
-import Renderer from './components/Renderer.vue'
 </script>
 
 <template>
   <Header />
-  <Renderer />
+  <iframe id="iframe" frameborder="0"></iframe>
 </template>
+
+<style>
+#iframe {
+  flex: 1;
+  width: 100%;
+}
+</style>

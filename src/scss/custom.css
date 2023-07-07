@@ -1,0 +1,11 @@
+@media screen and (max-width: 860px) {
+    .docx-0-wrapper {
+        padding: 0 !important;
+        background: transparent !important;
+    }
+    .docx-0 {
+        width: 100% !important;
+        padding: 30px !important;
+        box-shadow: none !important;
+    }
+}
