@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import {useDocStore} from "@/stores/doc";
-import type { IDocItem } from '@/stores/types'
+import draggable from 'vuedraggable'
+import type {IDocItem} from '@/stores/types'
 
 const docStore = useDocStore()
 
@@ -13,15 +14,24 @@ function deleteDoc(doc: IDocItem) {
 </script>
 
 <template>
-<details>
-  <summary></summary>
-  <ul>
-    <li v-for="(doc, idx) in docStore.docs" :key="doc.id">
-      <span>{{idx+1}}. {{doc.file.name}}</span>
-      <i class="icon bi bi-trash-fill" @click="deleteDoc(doc)"></i>
-    </li>
-  </ul>
-</details>
+  <details>
+    <summary></summary>
+    <draggable
+        v-model="docStore.docs"
+        item-key="id"
+        tag="ul"
+        :force-fallback="true"
+        chosen-class="chosen"
+        animation="300"
+    >
+      <template #item="{element, index}">
+        <li>
+          <span>{{index+1}}. {{ element.file.name }}</span>
+          <i class="icon bi bi-trash-fill" @click="deleteDoc(element)"></i>
+        </li>
+      </template>
+    </draggable>
+  </details>
 </template>
 
 <style scoped lang="scss">
@@ -49,6 +59,7 @@ details {
     &:hover {
       background-color: rgb(0 0 0 / 50%);
     }
+
     &::marker {
       color: white;
     }
@@ -62,6 +73,7 @@ details {
     height: calc(100vh - 54px);
     overflow-y: scroll;
     overflow-x: hidden;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -93,6 +105,7 @@ details {
         transform: translateY(-50%);
         cursor: pointer;
         transition: color .1s;
+
         &:hover {
           color: red;
         }
