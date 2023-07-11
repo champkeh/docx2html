@@ -39,7 +39,7 @@ async function reload() {
 
     // 样式
     iframe.appendComment(doc.file.name, 'head')
-    iframe.appendMediaQueryStyle(className)
+    iframe.appendCustomDocStyle(className)
     iframe.append(style.childNodes, 'head')
 
     // 文档

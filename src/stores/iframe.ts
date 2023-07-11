@@ -1,9 +1,10 @@
 import {getType} from "@/utils";
 
 export class IFrame {
-    // 类的所有实例
+    // IFrame 的所有实例
     private static instances: Map<string, IFrame> = new Map()
 
+    // iframe 元素 (渲染目标)
     private readonly iframeEl?: HTMLIFrameElement
 
 
@@ -45,6 +46,10 @@ export class IFrame {
         this.instances.delete(id)
     }
 
+    private get html() {
+        return this.iframeEl!.contentDocument!.documentElement
+    }
+
     private get head() {
         return this.iframeEl!.contentDocument!.head
     }
@@ -55,22 +60,49 @@ export class IFrame {
 
     initialize() {
         this.reset()
-        this.appendStyleText(`html,body {margin: 0}`)
+        this.customHead()
     }
 
     reset() {
+        this.html.lang = 'zh-CN'
         this.head.innerHTML = ''
         this.body.innerHTML = ''
     }
 
+    /**
+     * 自定义样式
+     */
+    customHead() {
+        this.head.innerHTML = `
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"/>
+    <style>html,body {margin: 0}</style>`
+    }
+
 
     /**
-     * 对应文档的媒体查询样式
+     * 定制文档样式(包括移动端适配)
      * @param className 文档的className
      * @param minWidth 配置媒体查询的 min-width
      */
-    mediaQueryStyle(className: string, minWidth: string) {
+    customDocStyle(className: string, minWidth: string) {
         return `
+.${className}-wrapper {
+    background-color: #ebebeb !important;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+.${className} {
+    background-color: #FFF !important;
+    border-radius: 1px !important;
+    -moz-box-shadow: 0 0 10px 5px #888 !important;
+    -webkit-box-shadow: 0 0 10px 5px #888 !important;
+    box-shadow: 0 0 10px 5px #888 !important;
+}
 @media screen and (max-width: ${minWidth}) {
     .${className}-wrapper {
         padding: 0 !important;
@@ -86,15 +118,15 @@ export class IFrame {
     }
 
     /**
-     * 加入媒体查询样式
+     * 加入文档的定制样式
      * @param className
      * @param minWidth
      */
-    appendMediaQueryStyle(className: string, minWidth = '860px') {
+    appendCustomDocStyle(className: string, minWidth = '860px') {
         const styleContainer = document.createElement('div')
-        styleContainer.appendChild(document.createComment('响应式布局样式'))
+        styleContainer.appendChild(document.createComment(`自定义样式: ${className}`))
         const style = document.createElement('style')
-        style.innerHTML = this.mediaQueryStyle(className, minWidth)
+        style.innerHTML = this.customDocStyle(className, minWidth)
         styleContainer.appendChild(style)
 
         this.append(styleContainer.childNodes, 'head')
@@ -162,11 +194,6 @@ export class IFrame {
         return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="renderer" content="webkit"/>
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"/>
     <title>${title}</title>
     ${this.head.innerHTML}
 </head>
