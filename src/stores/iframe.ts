@@ -91,7 +91,7 @@ export class IFrame {
     customDocStyle(className: string, minWidth: string) {
         return `
 .${className}-wrapper {
-    background-color: #a5a5a5 !important;
+    background-color: #efefef !important;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -101,10 +101,10 @@ export class IFrame {
 .${className} {
     flex: 1;
     background-color: #FFF !important;
-    border-radius: 5px !important;
     -moz-box-shadow: 0 0 10px 5px #888 !important;
     -webkit-box-shadow: 0 0 10px 5px #888 !important;
     box-shadow: 0 0 10px 5px #888 !important;
+    margin-bottom: 8px !important;
 }
 @media screen and (max-width: ${minWidth}) {
     .${className}-wrapper {
