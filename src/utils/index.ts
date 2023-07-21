@@ -18,9 +18,11 @@ export function renderDoc(doc: IDocItem, hintCls?: string) {
             ...options,
             className: hintCls || doc.className
         })
-        .then(async () => {
+        .then(async (doc) => {
             // 这里最好等待一段时间，让文档中的资源加载完成
             await sleep(100)
+
+            console.log(doc)
 
             return [bodyContainer, styleContainer]
         })

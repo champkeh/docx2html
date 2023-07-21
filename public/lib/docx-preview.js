@@ -2851,7 +2851,7 @@ section.${c}>article { margin-bottom: auto; }
     }
     renderNumbering(numberings, styleContainer) {
         let styleText = "";
-        const rootCounters = [];
+        const resetCounters = [];
         for (const num of numberings) {
             const selector = `p.${this.numberingClass(num.id, num.level)}`;
             let listStyleType = "none";
@@ -2869,14 +2869,13 @@ section.${c}>article { margin-bottom: auto; }
             }
             else if (num.levelText) {
                 let counter = this.numberingCounter(num.id, num.level);
+                const counterReset = `${counter} ${num.start - 1}`;
                 if (num.level > 0) {
                     styleText += this.styleToString(`p.${this.numberingClass(num.id, num.level - 1)}`, {
-                        "counter-reset": `${counter} ${num.start - 1}`
+                        "counter-reset": counterReset
                     });
                 }
-                else {
-                    rootCounters.push(counter, num.start - 1);
-                }
+                resetCounters.push(counterReset);
                 styleText += this.styleToString(`${selector}:before`, Object.assign({ "content": this.levelTextToContent(num.levelText, num.suff, num.id, this.numFormatToCssValue(num.format)), "counter-increment": counter }, num.rStyle));
             }
             else {
@@ -2884,9 +2883,9 @@ section.${c}>article { margin-bottom: auto; }
             }
             styleText += this.styleToString(selector, Object.assign({ "display": "list-item", "list-style-position": "inside", "list-style-type": listStyleType }, num.pStyle));
         }
-        if (rootCounters.length > 0) {
+        if (resetCounters.length > 0) {
             styleText += this.styleToString(this.rootSelector, {
-                "counter-reset": rootCounters.join(" ")
+                "counter-reset": resetCounters.join(" ")
             });
         }
         return createStyleElement(styleText);
