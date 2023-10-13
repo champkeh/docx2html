@@ -12,191 +12,6 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/mathml.scss":
-/*!*************************!*\
-  !*** ./src/mathml.scss ***!
-  \*************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
-// Imports
-
-
-
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 100%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27m0,75 l5,0 l5,25 l10,-100%27 stroke=%27black%27 fill=%27none%27 vector-effect=%27non-scaling-stroke%27/%3E%3C/svg%3E */ "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 100%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27m0,75 l5,0 l5,25 l10,-100%27 stroke=%27black%27 fill=%27none%27 vector-effect=%27non-scaling-stroke%27/%3E%3C/svg%3E"), __webpack_require__.b);
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "@namespace \"http://www.w3.org/1998/Math/MathML\";\nmath {\n  display: inline-block;\n  line-height: initial;\n}\n\nmfrac {\n  display: inline-block;\n  vertical-align: -50%;\n  text-align: center;\n}\nmfrac > :first-child {\n  border-bottom: solid thin currentColor;\n}\nmfrac > * {\n  display: block;\n}\n\nmsub > :nth-child(2) {\n  font-size: smaller;\n  vertical-align: sub;\n}\n\nmsup > :nth-child(2) {\n  font-size: smaller;\n  vertical-align: super;\n}\n\nmunder, mover, munderover {\n  display: inline-flex;\n  flex-flow: column nowrap;\n  vertical-align: middle;\n  text-align: center;\n}\nmunder > :not(:first-child), mover > :not(:first-child), munderover > :not(:first-child) {\n  font-size: smaller;\n}\n\nmunderover > :last-child {\n  order: -1;\n}\n\nmroot, msqrt {\n  position: relative;\n  display: inline-block;\n  border-top: solid thin currentColor;\n  margin-top: 0.5px;\n  vertical-align: middle;\n  margin-left: 1ch;\n}\nmroot:before, msqrt:before {\n  content: \"\";\n  display: inline-block;\n  position: absolute;\n  width: 1ch;\n  left: -1ch;\n  top: -1px;\n  bottom: 0;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}", "",{"version":3,"sources":["webpack://./src/mathml.scss"],"names":[],"mappings":"AAAA,+CAAA;AAEA;EACI,qBAAA;EACA,oBAAA;AAAJ;;AAGA;EACI,qBAAA;EACA,oBAAA;EACA,kBAAA;AAAJ;AAEI;EACI,sCAAA;AAAR;AAGI;EACI,cAAA;AADR;;AAMI;EACI,kBAAA;EACA,mBAAA;AAHR;;AAQI;EACI,kBAAA;EACA,qBAAA;AALR;;AASA;EACI,oBAAA;EACA,wBAAA;EACA,sBAAA;EACA,kBAAA;AANJ;AAQI;EACI,kBAAA;AANR;;AAWI;EAAgB,SAAA;AAPpB;;AAUA;EACI,kBAAA;EACA,qBAAA;EACA,mCAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;AAPJ;AASI;EACI,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,UAAA;EACA,UAAA;EACA,SAAA;EACA,SAAA;EACA,yDAAA;AAPR","sourcesContent":["@namespace \"http://www.w3.org/1998/Math/MathML\";\n\nmath {\n    display: inline-block;\n    line-height: initial;\n}\n\nmfrac {\n    display: inline-block;\n    vertical-align: -50%;\n    text-align: center;\n\n    &>:first-child {\n        border-bottom: solid thin currentColor;\n    }\n\n    &>* {\n        display: block;\n    }\n}\n\nmsub {\n    &>:nth-child(2) {\n        font-size: smaller;\n        vertical-align: sub;\n    }\n}\n\nmsup {\n    &>:nth-child(2) {\n        font-size: smaller;\n        vertical-align: super;\n    }\n}\n\nmunder, mover, munderover {\n    display: inline-flex;\n    flex-flow: column nowrap;\n    vertical-align: middle;\n    text-align: center;\n\n    &>:not(:first-child) {\n        font-size: smaller;\n    }\n}\n\nmunderover {\n    &>:last-child { order: -1; }\n}\n\nmroot, msqrt {\n    position: relative;\n    display: inline-block;\n    border-top: solid thin currentColor;  \n    margin-top: 0.5px;\n    vertical-align: middle;  \n    margin-left: 1ch; \n\n    &:before {\n        content: \"\";\n        display: inline-block;\n        position: absolute;\n        width: 1ch;\n        left: -1ch;\n        top: -1px;\n        bottom: 0;\n        background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 100' preserveAspectRatio='none'%3E%3Cpath d='m0,75 l5,0 l5,25 l10,-100' stroke='black' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E\");\n    }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___.toString());
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-module.exports = function (cssWithMappingToString) {
-  var list = [];
-
-  // return the list of modules as css string
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = "";
-      var needLayer = typeof item[5] !== "undefined";
-      if (item[4]) {
-        content += "@supports (".concat(item[4], ") {");
-      }
-      if (item[2]) {
-        content += "@media ".concat(item[2], " {");
-      }
-      if (needLayer) {
-        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
-      }
-      content += cssWithMappingToString(item);
-      if (needLayer) {
-        content += "}";
-      }
-      if (item[2]) {
-        content += "}";
-      }
-      if (item[4]) {
-        content += "}";
-      }
-      return content;
-    }).join("");
-  };
-
-  // import a list of modules into the list
-  list.i = function i(modules, media, dedupe, supports, layer) {
-    if (typeof modules === "string") {
-      modules = [[null, modules, undefined]];
-    }
-    var alreadyImportedModules = {};
-    if (dedupe) {
-      for (var k = 0; k < this.length; k++) {
-        var id = this[k][0];
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-    for (var _k = 0; _k < modules.length; _k++) {
-      var item = [].concat(modules[_k]);
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        continue;
-      }
-      if (typeof layer !== "undefined") {
-        if (typeof item[5] === "undefined") {
-          item[5] = layer;
-        } else {
-          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
-          item[5] = layer;
-        }
-      }
-      if (media) {
-        if (!item[2]) {
-          item[2] = media;
-        } else {
-          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
-          item[2] = media;
-        }
-      }
-      if (supports) {
-        if (!item[4]) {
-          item[4] = "".concat(supports);
-        } else {
-          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
-          item[4] = supports;
-        }
-      }
-      list.push(item);
-    }
-  };
-  return list;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    options = {};
-  }
-  if (!url) {
-    return url;
-  }
-  url = String(url.__esModule ? url.default : url);
-
-  // If url is already wrapped in quotes, remove them
-  if (/^['"].*['"]$/.test(url)) {
-    url = url.slice(1, -1);
-  }
-  if (options.hash) {
-    url += options.hash;
-  }
-
-  // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
-  }
-  return url;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
-  \************************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (item) {
-  var content = item[1];
-  var cssMapping = item[3];
-  if (!cssMapping) {
-    return content;
-  }
-  if (typeof btoa === "function") {
-    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
-    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-    var sourceMapping = "/*# ".concat(data, " */");
-    return [content].concat([sourceMapping]).join("\n");
-  }
-  return [content].join("\n");
-};
-
-/***/ }),
-
 /***/ "./src/common/open-xml-package.ts":
 /*!****************************************!*\
   !*** ./src/common/open-xml-package.ts ***!
@@ -217,7 +32,7 @@ class OpenXmlPackage {
         this.xmlParser = new xml_parser_1.XmlParser();
     }
     get(path) {
-        return this._zip.file(normalizePath(path));
+        return this._zip.files[normalizePath(path)];
     }
     update(path, content) {
         this._zip.file(path, content);
@@ -359,6 +174,8 @@ const mmlTagMap = {
     "oMath": dom_1.DomType.MmlMath,
     "oMathPara": dom_1.DomType.MmlMathParagraph,
     "f": dom_1.DomType.MmlFraction,
+    "func": dom_1.DomType.MmlFunction,
+    "fName": dom_1.DomType.MmlFunctionName,
     "num": dom_1.DomType.MmlNumerator,
     "den": dom_1.DomType.MmlDenominator,
     "rad": dom_1.DomType.MmlRadical,
@@ -366,10 +183,19 @@ const mmlTagMap = {
     "e": dom_1.DomType.MmlBase,
     "sSup": dom_1.DomType.MmlSuperscript,
     "sSub": dom_1.DomType.MmlSubscript,
+    "sPre": dom_1.DomType.MmlPreSubSuper,
     "sup": dom_1.DomType.MmlSuperArgument,
     "sub": dom_1.DomType.MmlSubArgument,
     "d": dom_1.DomType.MmlDelimiter,
     "nary": dom_1.DomType.MmlNary,
+    "eqArr": dom_1.DomType.MmlEquationArray,
+    "lim": dom_1.DomType.MmlLimit,
+    "limLow": dom_1.DomType.MmlLimitLower,
+    "m": dom_1.DomType.MmlMatrix,
+    "mr": dom_1.DomType.MmlMatrixRow,
+    "box": dom_1.DomType.MmlBox,
+    "bar": dom_1.DomType.MmlBar,
+    "groupChr": dom_1.DomType.MmlGroupChar
 };
 class DocumentParser {
     constructor(options) {
@@ -581,8 +407,7 @@ class DocumentParser {
                 modificator = ":not(.no-hband)";
                 selector = "tr.even-row";
                 break;
-            default:
-                return [];
+            default: return [];
         }
         xmlUtil.foreach(node, n => {
             switch (n.localName) {
@@ -613,38 +438,32 @@ class DocumentParser {
         return result;
     }
     parseNumberingFile(xnums) {
-        const result = [];
-        const mapping = {};
-        const bullets = [];
+        var result = [];
+        var mapping = {};
+        var bullets = [];
         xmlUtil.foreach(xnums, n => {
             switch (n.localName) {
                 case "abstractNum":
-                    result.push(...this.parseAbstractNumbering(n, bullets));
+                    this.parseAbstractNumbering(n, bullets)
+                        .forEach(x => result.push(x));
                     break;
                 case "numPicBullet":
                     bullets.push(this.parseNumberingPicBullet(n));
                     break;
                 case "num":
-                    const numId = xml_parser_1.default.attr(n, "numId");
-                    const abstractNumId = xml_parser_1.default.elementAttr(n, "abstractNumId", "val");
-                    mapping[numId] = abstractNumId;
+                    var numId = xml_parser_1.default.attr(n, "numId");
+                    var abstractNumId = xml_parser_1.default.elementAttr(n, "abstractNumId", "val");
+                    mapping[abstractNumId] = numId;
                     break;
             }
         });
-        result.forEach(x => {
-            for (let numId in mapping) {
-                if (mapping[numId] === x.id) {
-                    x.id = numId;
-                    break;
-                }
-            }
-        });
+        result.forEach(x => x.id = mapping[x.id]);
         return result;
     }
     parseNumberingPicBullet(elem) {
-        const pict = xml_parser_1.default.element(elem, "pict");
-        const shape = pict && xml_parser_1.default.element(pict, "shape");
-        const imagedata = shape && xml_parser_1.default.element(shape, "imagedata");
+        var pict = xml_parser_1.default.element(elem, "pict");
+        var shape = pict && xml_parser_1.default.element(pict, "shape");
+        var imagedata = shape && xml_parser_1.default.element(shape, "imagedata");
         return imagedata ? {
             id: xml_parser_1.default.intAttr(elem, "numPicBulletId"),
             src: xml_parser_1.default.attr(imagedata, "id"),
@@ -652,8 +471,8 @@ class DocumentParser {
         } : null;
     }
     parseAbstractNumbering(node, bullets) {
-        const result = [];
-        const id = xml_parser_1.default.attr(node, "abstractNumId");
+        var result = [];
+        var id = xml_parser_1.default.attr(node, "abstractNumId");
         xmlUtil.foreach(node, n => {
             switch (n.localName) {
                 case "lvl":
@@ -664,7 +483,7 @@ class DocumentParser {
         return result;
     }
     parseNumberingLevel(id, node, bullets) {
-        const result = {
+        var result = {
             id: id,
             level: xml_parser_1.default.intAttr(node, "ilvl"),
             start: 1,
@@ -675,6 +494,9 @@ class DocumentParser {
         };
         xmlUtil.foreach(node, n => {
             switch (n.localName) {
+                case "start":
+                    result.start = xml_parser_1.default.intAttr(n, "val");
+                    break;
                 case "pPr":
                     this.parseDefaultProperties(n, result.pStyle);
                     break;
@@ -682,7 +504,7 @@ class DocumentParser {
                     this.parseDefaultProperties(n, result.rStyle);
                     break;
                 case "lvlPicBulletId":
-                    const id = xml_parser_1.default.intAttr(n, "val");
+                    var id = xml_parser_1.default.intAttr(n, "val");
                     result.bullet = bullets.find(x => x.id == id);
                     break;
                 case "lvlText":
@@ -693,9 +515,6 @@ class DocumentParser {
                     break;
                 case "numFmt":
                     result.format = xml_parser_1.default.attr(n, "val");
-                    break;
-                case 'start':
-                    result.start = xml_parser_1.default.intAttr(n, 'val');
                     break;
                 case "suff":
                     result.suff = xml_parser_1.default.attr(n, "val");
@@ -921,6 +740,12 @@ class DocumentParser {
                 case "chr":
                     result.char = xml_parser_1.default.attr(el, "val");
                     break;
+                case "vertJc":
+                    result.verticalJustification = xml_parser_1.default.attr(el, "val");
+                    break;
+                case "pos":
+                    result.position = xml_parser_1.default.attr(el, "val");
+                    break;
                 case "degHide":
                     result.hideDegree = xml_parser_1.default.boolAttr(el, "val");
                     break;
@@ -952,7 +777,7 @@ class DocumentParser {
     parseVmlPicture(elem) {
         const result = { type: dom_1.DomType.VmlPicture, children: [] };
         for (const el of xml_parser_1.default.elements(elem)) {
-            const child = (0, vml_1.parseVmlElement)(el);
+            const child = (0, vml_1.parseVmlElement)(el, this);
             child && result.children.push(child);
         }
         return result;
@@ -1325,6 +1150,12 @@ class DocumentParser {
                     if (xml_parser_1.default.boolAttr(c, "val"))
                         style["overflow-wrap"] = "break-word";
                     break;
+                case "suppressAutoHyphens":
+                    style["hyphens"] = xml_parser_1.default.boolAttr(c, "val", true) ? "none" : "auto";
+                    break;
+                case "lang":
+                    style["$lang"] = xml_parser_1.default.attr(c, "val");
+                    break;
                 case "bCs":
                 case "iCs":
                 case "szCs":
@@ -1338,7 +1169,6 @@ class DocumentParser {
                 case "suppressLineNumbers":
                 case "keepLines":
                 case "keepNext":
-                case "lang":
                 case "widowControl":
                 case "bidi":
                 case "rtl":
@@ -1526,13 +1356,11 @@ class values {
     static valueOfSize(c, attr) {
         var type = common_1.LengthUsage.Dxa;
         switch (xml_parser_1.default.attr(c, "type")) {
-            case "dxa":
-                break;
+            case "dxa": break;
             case "pct":
                 type = common_1.LengthUsage.Percent;
                 break;
-            case "auto":
-                return "auto";
+            case "auto": return "auto";
         }
         return xml_parser_1.default.lengthAttr(c, attr, type);
     }
@@ -1564,25 +1392,19 @@ class values {
         var type = xml_parser_1.default.attr(c, "val");
         switch (type) {
             case "start":
-            case "left":
-                return "left";
-            case "center":
-                return "center";
+            case "left": return "left";
+            case "center": return "center";
             case "end":
-            case "right":
-                return "right";
-            case "both":
-                return "justify";
+            case "right": return "right";
+            case "both": return "justify";
         }
         return type;
     }
     static valueOfVertAlign(c, asTagName = false) {
         var type = xml_parser_1.default.attr(c, "val");
         switch (type) {
-            case "subscript":
-                return "sub";
-            case "superscript":
-                return asTagName ? "sup" : "super";
+            case "subscript": return "sub";
+            case "superscript": return asTagName ? "sup" : "super";
         }
         return asTagName ? null : type;
     }
@@ -1590,14 +1412,10 @@ class values {
         var type = xml_parser_1.default.attr(c, "val");
         switch (type) {
             case "auto":
-            case "baseline":
-                return "baseline";
-            case "top":
-                return "top";
-            case "center":
-                return "middle";
-            case "bottom":
-                return "bottom";
+            case "baseline": return "baseline";
+            case "top": return "top";
+            case "center": return "middle";
+            case "bottom": return "bottom";
         }
         return type;
     }
@@ -1925,25 +1743,22 @@ function convertLength(val, usage = exports.LengthUsage.Dxa) {
     if (val == null || /.+(p[xt]|[%])$/.test(val)) {
         return val;
     }
-    return `${(parseInt(val) * usage.mul).toFixed(2)}${usage.unit}`;
+    let num = parseInt(val) * usage.mul;
+    if (usage === exports.LengthUsage.Border) {
+        num = Math.max(num, 1);
+    }
+    return `${num.toFixed(2)}${usage.unit}`;
 }
 exports.convertLength = convertLength;
 function convertBoolean(v, defaultValue = false) {
     switch (v) {
-        case "1":
-            return true;
-        case "0":
-            return false;
-        case "on":
-            return true;
-        case "off":
-            return false;
-        case "true":
-            return true;
-        case "false":
-            return false;
-        default:
-            return defaultValue;
+        case "1": return true;
+        case "0": return false;
+        case "on": return true;
+        case "off": return false;
+        case "true": return true;
+        case "false": return false;
+        default: return defaultValue;
     }
 }
 exports.convertBoolean = convertBoolean;
@@ -2003,7 +1818,7 @@ exports.DocumentPart = DocumentPart;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.DomType = void 0;
+exports.OpenXmlElementBase = exports.DomType = void 0;
 var DomType;
 (function (DomType) {
     DomType["Document"] = "document";
@@ -2035,6 +1850,8 @@ var DomType;
     DomType["MmlMath"] = "mmlMath";
     DomType["MmlMathParagraph"] = "mmlMathParagraph";
     DomType["MmlFraction"] = "mmlFraction";
+    DomType["MmlFunction"] = "mmlFunction";
+    DomType["MmlFunctionName"] = "mmlFunctionName";
     DomType["MmlNumerator"] = "mmlNumerator";
     DomType["MmlDenominator"] = "mmlDenominator";
     DomType["MmlRadical"] = "mmlRadical";
@@ -2042,16 +1859,32 @@ var DomType;
     DomType["MmlDegree"] = "mmlDegree";
     DomType["MmlSuperscript"] = "mmlSuperscript";
     DomType["MmlSubscript"] = "mmlSubscript";
+    DomType["MmlPreSubSuper"] = "mmlPreSubSuper";
     DomType["MmlSubArgument"] = "mmlSubArgument";
     DomType["MmlSuperArgument"] = "mmlSuperArgument";
     DomType["MmlNary"] = "mmlNary";
     DomType["MmlDelimiter"] = "mmlDelimiter";
     DomType["MmlRun"] = "mmlRun";
+    DomType["MmlEquationArray"] = "mmlEquationArray";
+    DomType["MmlLimit"] = "mmlLimit";
+    DomType["MmlLimitLower"] = "mmlLimitLower";
+    DomType["MmlMatrix"] = "mmlMatrix";
+    DomType["MmlMatrixRow"] = "mmlMatrixRow";
+    DomType["MmlBox"] = "mmlBox";
+    DomType["MmlBar"] = "mmlBar";
+    DomType["MmlGroupChar"] = "mmlGroupChar";
     DomType["VmlElement"] = "vmlElement";
     DomType["Inserted"] = "inserted";
     DomType["Deleted"] = "deleted";
     DomType["DeletedText"] = "deletedText";
 })(DomType = exports.DomType || (exports.DomType = {}));
+class OpenXmlElementBase {
+    constructor() {
+        this.children = [];
+        this.cssStyle = {};
+    }
+}
+exports.OpenXmlElementBase = OpenXmlElementBase;
 
 
 /***/ }),
@@ -2122,7 +1955,7 @@ function parseParagraphProperty(elem, props, xml) {
             props.textAlignment = xml.attr(elem, "val");
             return false;
             break;
-        case "keepNext":
+        case "keepLines":
             props.keepLines = xml.boolAttr(elem, "val", true);
             break;
         case "keepNext":
@@ -2309,7 +2142,7 @@ function parseFooterHeaderReference(elem, xml) {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.renderAsync = exports.parseAsync = exports.defaultOptions = void 0;
+exports.renderAsync = exports.praseAsync = exports.defaultOptions = void 0;
 const word_document_1 = __webpack_require__(/*! ./word-document */ "./src/word-document.ts");
 const document_parser_1 = __webpack_require__(/*! ./document-parser */ "./src/document-parser.ts");
 const html_renderer_1 = __webpack_require__(/*! ./html-renderer */ "./src/html-renderer.ts");
@@ -2329,18 +2162,18 @@ exports.defaultOptions = {
     renderFootnotes: true,
     renderEndnotes: true,
     useBase64URL: false,
-    useMathMLPolyfill: false,
     renderChanges: false
 };
-function parseAsync(data, userOptions = null) {
+function praseAsync(data, userOptions = null) {
     const ops = Object.assign(Object.assign({}, exports.defaultOptions), userOptions);
     return word_document_1.WordDocument.load(data, new document_parser_1.DocumentParser(ops), ops);
 }
-exports.parseAsync = parseAsync;
+exports.praseAsync = praseAsync;
 async function renderAsync(data, bodyContainer, styleContainer = null, userOptions = null) {
-    const doc = await parseAsync(data, userOptions);
+    const ops = Object.assign(Object.assign({}, exports.defaultOptions), userOptions);
     const renderer = new html_renderer_1.HtmlRenderer(window.document);
-    renderer.render(doc, bodyContainer, styleContainer, Object.assign(Object.assign({}, exports.defaultOptions), userOptions));
+    const doc = await word_document_1.WordDocument.load(data, new document_parser_1.DocumentParser(ops), ops);
+    renderer.render(doc, bodyContainer, styleContainer, ops);
     return doc;
 }
 exports.renderAsync = renderAsync;
@@ -2434,19 +2267,17 @@ exports.parseEmbedFontRef = parseEmbedFontRef;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WmlFooter = exports.WmlHeader = void 0;
 const dom_1 = __webpack_require__(/*! ../document/dom */ "./src/document/dom.ts");
-class WmlHeader {
+class WmlHeader extends dom_1.OpenXmlElementBase {
     constructor() {
+        super(...arguments);
         this.type = dom_1.DomType.Header;
-        this.children = [];
-        this.cssStyle = {};
     }
 }
 exports.WmlHeader = WmlHeader;
-class WmlFooter {
+class WmlFooter extends dom_1.OpenXmlElementBase {
     constructor() {
+        super(...arguments);
         this.type = dom_1.DomType.Footer;
-        this.children = [];
-        this.cssStyle = {};
     }
 }
 exports.WmlFooter = WmlFooter;
@@ -2504,7 +2335,6 @@ exports.HtmlRenderer = void 0;
 const dom_1 = __webpack_require__(/*! ./document/dom */ "./src/document/dom.ts");
 const utils_1 = __webpack_require__(/*! ./utils */ "./src/utils.ts");
 const javascript_1 = __webpack_require__(/*! ./javascript */ "./src/javascript.ts");
-const mathml_scss_1 = __webpack_require__(/*! ./mathml.scss */ "./src/mathml.scss");
 const ns = {
     svg: "http://www.w3.org/2000/svg",
     mathML: "http://www.w3.org/1998/Math/MathML"
@@ -2522,7 +2352,7 @@ class HtmlRenderer {
         this.footnoteMap = {};
         this.endnoteMap = {};
         this.currentEndnoteIds = [];
-        this.usedHeaderFooterParts = [];
+        this.usedHederFooterParts = [];
         this.currentTabs = [];
         this.tabsTimeout = 0;
         this.createElement = createElement;
@@ -2539,10 +2369,6 @@ class HtmlRenderer {
         removeAllElements(bodyContainer);
         appendComment(styleContainer, "docxjs library predefined styles");
         styleContainer.appendChild(this.renderDefaultStyle());
-        if (!window.MathMLElement && options.useMathMLPolyfill) {
-            appendComment(styleContainer, "docxjs mathml polyfill styles");
-            styleContainer.appendChild(createStyleElement(mathml_scss_1.default));
-        }
         if (document.themePart) {
             appendComment(styleContainer, "docxjs document theme values");
             this.renderTheme(document.themePart, styleContainer);
@@ -2553,7 +2379,7 @@ class HtmlRenderer {
             styleContainer.appendChild(this.renderStyles(document.stylesPart.styles));
         }
         if (document.numberingPart) {
-            this.processNumberings(document.numberingPart.domNumberings);
+            this.prodessNumberings(document.numberingPart.domNumberings);
             appendComment(styleContainer, "docxjs document numbering styles");
             styleContainer.appendChild(this.renderNumbering(document.numberingPart.domNumberings, styleContainer));
         }
@@ -2568,7 +2394,7 @@ class HtmlRenderer {
         }
         if (!options.ignoreFonts && document.fontTablePart)
             this.renderFontTable(document.fontTablePart, styleContainer);
-        const sectionElements = this.renderSections(document.documentPart.body);
+        var sectionElements = this.renderSections(document.documentPart.body);
         if (this.options.inWrapper) {
             bodyContainer.appendChild(this.renderWrapper(sectionElements));
         }
@@ -2626,7 +2452,7 @@ class HtmlRenderer {
     processStyles(styles) {
         const stylesMap = (0, utils_1.keyBy)(styles.filter(x => x.id != null), x => x.id);
         for (const style of styles.filter(x => x.basedOn)) {
-            const baseStyle = stylesMap[style.basedOn];
+            var baseStyle = stylesMap[style.basedOn];
             if (baseStyle) {
                 style.paragraphProps = (0, utils_1.mergeDeep)(style.paragraphProps, baseStyle.paragraphProps);
                 style.runProps = (0, utils_1.mergeDeep)(style.runProps, baseStyle.runProps);
@@ -2648,7 +2474,7 @@ class HtmlRenderer {
         }
         return stylesMap;
     }
-    processNumberings(numberings) {
+    prodessNumberings(numberings) {
         var _a;
         for (let num of numberings.filter(n => n.pStyleName)) {
             const style = this.findStyle(num.pStyleName);
@@ -2659,7 +2485,7 @@ class HtmlRenderer {
     }
     processElement(element) {
         if (element.children) {
-            for (const e of element.children) {
+            for (var e of element.children) {
                 e.parent = element;
                 if (e.type == dom_1.DomType.Table) {
                     this.processTable(e);
@@ -2671,8 +2497,8 @@ class HtmlRenderer {
         }
     }
     processTable(table) {
-        for (const r of table.children) {
-            for (const c of r.children) {
+        for (var r of table.children) {
+            for (var c of r.children) {
                 c.cssStyle = this.copyStyleProperties(table.cellStyle, c.cssStyle, [
                     "border-left", "border-right", "border-top", "border-bottom",
                     "padding-left", "padding-right", "padding-top", "padding-bottom"
@@ -2688,14 +2514,14 @@ class HtmlRenderer {
             output = {};
         if (attrs == null)
             attrs = Object.getOwnPropertyNames(input);
-        for (const key of attrs) {
+        for (var key of attrs) {
             if (input.hasOwnProperty(key) && !output.hasOwnProperty(key))
                 output[key] = input[key];
         }
         return output;
     }
     createSection(className, props) {
-        const elem = this.createElement("section", { className });
+        var elem = this.createElement("section", { className });
         if (props) {
             if (props.pageMargins) {
                 elem.style.paddingLeft = props.pageMargins.left;
@@ -2731,7 +2557,7 @@ class HtmlRenderer {
             const sectionElement = this.createSection(this.className, props);
             this.renderStyleValues(document.cssStyle, sectionElement);
             this.options.renderHeaders && this.renderHeaderFooter(props.headerRefs, props, result.length, prevProps != props, sectionElement);
-            const contentElement = this.createElement("article");
+            var contentElement = this.createElement("article");
             this.renderElements(section.elements, contentElement);
             sectionElement.appendChild(contentElement);
             if (this.options.renderFootnotes) {
@@ -2750,13 +2576,13 @@ class HtmlRenderer {
         var _a, _b;
         if (!refs)
             return;
-        const ref = (_b = (_a = (props.titlePage && firstOfSection ? refs.find(x => x.type == "first") : null)) !== null && _a !== void 0 ? _a : (page % 2 == 1 ? refs.find(x => x.type == "even") : null)) !== null && _b !== void 0 ? _b : refs.find(x => x.type == "default");
-        const part = ref && this.document.findPartByRelId(ref.id, this.document.documentPart);
+        var ref = (_b = (_a = (props.titlePage && firstOfSection ? refs.find(x => x.type == "first") : null)) !== null && _a !== void 0 ? _a : (page % 2 == 1 ? refs.find(x => x.type == "even") : null)) !== null && _b !== void 0 ? _b : refs.find(x => x.type == "default");
+        var part = ref && this.document.findPartByRelId(ref.id, this.document.documentPart);
         if (part) {
             this.currentPart = part;
-            if (!this.usedHeaderFooterParts.includes(part.path)) {
+            if (!this.usedHederFooterParts.includes(part.path)) {
                 this.processElement(part.rootElement);
-                this.usedHeaderFooterParts.push(part.path);
+                this.usedHederFooterParts.push(part.path);
             }
             this.renderElements([part.rootElement], into);
             this.currentPart = null;
@@ -2771,9 +2597,8 @@ class HtmlRenderer {
     }
     splitBySection(elements) {
         var _a;
-        let current = { sectProps: null, elements: [] };
-        const result = [current];
-        let sectProps = undefined;
+        var current = { sectProps: null, elements: [] };
+        var result = [current];
         for (let elem of elements) {
             if (elem.type == dom_1.DomType.Paragraph) {
                 const s = this.findStyle(elem.styleName);
@@ -2786,9 +2611,9 @@ class HtmlRenderer {
             current.elements.push(elem);
             if (elem.type == dom_1.DomType.Paragraph) {
                 const p = elem;
-                sectProps = p.sectionProps;
-                let pBreakIndex = -1;
-                let rBreakIndex = -1;
+                var sectProps = p.sectionProps;
+                var pBreakIndex = -1;
+                var rBreakIndex = -1;
                 if (this.options.breakPages && p.children) {
                     pBreakIndex = p.children.findIndex(r => {
                         var _a, _b;
@@ -2805,8 +2630,8 @@ class HtmlRenderer {
                     let breakRun = p.children[pBreakIndex];
                     let splitRun = rBreakIndex < breakRun.children.length - 1;
                     if (pBreakIndex < p.children.length - 1 || splitRun) {
-                        const children = elem.children;
-                        const newParagraph = Object.assign(Object.assign({}, elem), { children: children.slice(pBreakIndex) });
+                        var children = elem.children;
+                        var newParagraph = Object.assign(Object.assign({}, elem), { children: children.slice(pBreakIndex) });
                         elem.children = children.slice(0, pBreakIndex);
                         current.elements.push(newParagraph);
                         if (splitRun) {
@@ -2834,13 +2659,16 @@ class HtmlRenderer {
         return this.createElement("div", { className: `${this.className}-wrapper` }, children);
     }
     renderDefaultStyle() {
-        const c = this.className;
-        const styleText = `
+        var c = this.className;
+        var styleText = `
 .${c}-wrapper { background: gray; padding: 30px; padding-bottom: 0px; display: flex; flex-flow: column; align-items: center; } 
 .${c}-wrapper>section.${c} { background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); margin-bottom: 30px; }
-.${c} { color: black; }
+.${c} { color: black; hyphens: auto; }
 section.${c} { box-sizing: border-box; display: flex; flex-flow: column nowrap; position: relative; overflow: hidden; }
-section.${c}>article { margin-bottom: auto; }
+section.${c}>article { margin-bottom: auto; z-index: 1; }
+section.${c}>footer { z-index: 1; }
+.${c} .table-wrapper { overflow-x: scroll; scrollbar-width: none; -ms-overflow-style: none; }
+.${c} .table-wrapper::-webkit-scrollbar { display: none; }
 .${c} table { border-collapse: collapse; }
 .${c} table td, .${c} table th { vertical-align: top; }
 .${c} p { margin: 0pt; min-height: 1em; }
@@ -2850,11 +2678,11 @@ section.${c}>article { margin-bottom: auto; }
         return createStyleElement(styleText);
     }
     renderNumbering(numberings, styleContainer) {
-        let styleText = "";
-        const resetCounters = [];
-        for (const num of numberings) {
-            const selector = `p.${this.numberingClass(num.id, num.level)}`;
-            let listStyleType = "none";
+        var styleText = "";
+        var resetCounters = [];
+        for (var num of numberings) {
+            var selector = `p.${this.numberingClass(num.id, num.level)}`;
+            var listStyleType = "none";
             if (num.bullet) {
                 let valiable = `--${this.className}-${num.bullet.src}`.toLowerCase();
                 styleText += this.styleToString(`${selector}:before`, {
@@ -2863,13 +2691,13 @@ section.${c}>article { margin-bottom: auto; }
                     "background": `var(${valiable})`
                 }, num.bullet.style);
                 this.document.loadNumberingImage(num.bullet.src).then(data => {
-                    const text = `${this.rootSelector} { ${valiable}: url(${data}) }`;
+                    var text = `${this.rootSelector} { ${valiable}: url(${data}) }`;
                     styleContainer.appendChild(createStyleElement(text));
                 });
             }
             else if (num.levelText) {
                 let counter = this.numberingCounter(num.id, num.level);
-                const counterReset = `${counter} ${num.start - 1}`;
+                const counterReset = counter + " " + (num.start - 1);
                 if (num.level > 0) {
                     styleText += this.styleToString(`p.${this.numberingClass(num.id, num.level - 1)}`, {
                         "counter-reset": counterReset
@@ -2892,23 +2720,23 @@ section.${c}>article { margin-bottom: auto; }
     }
     renderStyles(styles) {
         var _a;
-        let styleText = "";
+        var styleText = "";
         const stylesMap = this.styleMap;
-        const defaultStyles = (0, utils_1.keyBy)(styles.filter(s => s.isDefault), s => s.target);
+        const defautStyles = (0, utils_1.keyBy)(styles.filter(s => s.isDefault), s => s.target);
         for (const style of styles) {
-            let subStyles = style.styles;
+            var subStyles = style.styles;
             if (style.linked) {
-                const linkedStyle = style.linked && stylesMap[style.linked];
+                var linkedStyle = style.linked && stylesMap[style.linked];
                 if (linkedStyle)
                     subStyles = subStyles.concat(linkedStyle.styles);
                 else if (this.options.debug)
                     console.warn(`Can't find linked style ${style.linked}`);
             }
             for (const subStyle of subStyles) {
-                let selector = `${(_a = style.target) !== null && _a !== void 0 ? _a : ''}.${style.cssName}`;
+                var selector = `${(_a = style.target) !== null && _a !== void 0 ? _a : ''}.${style.cssName}`;
                 if (style.target != subStyle.target)
                     selector += ` ${subStyle.target}`;
-                if (defaultStyles[style.target] == style)
+                if (defautStyles[style.target] == style)
                     selector = `.${this.className} ${style.target}, ` + selector;
                 styleText += this.styleToString(selector, subStyle.values);
             }
@@ -2916,9 +2744,9 @@ section.${c}>article { margin-bottom: auto; }
         return createStyleElement(styleText);
     }
     renderNotes(noteIds, notesMap, into) {
-        const notes = noteIds.map(id => notesMap[id]).filter(x => x);
+        var notes = noteIds.map(id => notesMap[id]).filter(x => x);
         if (notes.length > 0) {
-            const result = this.createElement("ol", null, this.renderElements(notes));
+            var result = this.createElement("ol", null, this.renderElements(notes));
             into.appendChild(result);
         }
     }
@@ -2944,6 +2772,8 @@ section.${c}>article { margin-bottom: auto; }
                 return this.renderDrawing(elem);
             case dom_1.DomType.Image:
                 return this.renderImage(elem);
+            case dom_1.DomType.Text:
+                return this.renderText(elem);
             case dom_1.DomType.Text:
                 return this.renderText(elem);
             case dom_1.DomType.DeletedText:
@@ -2977,29 +2807,46 @@ section.${c}>article { margin-bottom: auto; }
                 return this.renderContainer(elem, "span");
             case dom_1.DomType.MmlFraction:
                 return this.renderContainerNS(elem, ns.mathML, "mfrac");
+            case dom_1.DomType.MmlBase:
+                return this.renderContainerNS(elem, ns.mathML, elem.parent.type == dom_1.DomType.MmlMatrixRow ? "mtd" : "mrow");
             case dom_1.DomType.MmlNumerator:
             case dom_1.DomType.MmlDenominator:
+            case dom_1.DomType.MmlFunction:
+            case dom_1.DomType.MmlLimit:
+            case dom_1.DomType.MmlBox:
                 return this.renderContainerNS(elem, ns.mathML, "mrow");
+            case dom_1.DomType.MmlGroupChar:
+                return this.renderMmlGroupChar(elem);
+            case dom_1.DomType.MmlLimitLower:
+                return this.renderContainerNS(elem, ns.mathML, "munder");
+            case dom_1.DomType.MmlMatrix:
+                return this.renderContainerNS(elem, ns.mathML, "mtable");
+            case dom_1.DomType.MmlMatrixRow:
+                return this.renderContainerNS(elem, ns.mathML, "mtr");
             case dom_1.DomType.MmlRadical:
                 return this.renderMmlRadical(elem);
-            case dom_1.DomType.MmlDegree:
-                return this.renderContainerNS(elem, ns.mathML, "mn");
             case dom_1.DomType.MmlSuperscript:
                 return this.renderContainerNS(elem, ns.mathML, "msup");
             case dom_1.DomType.MmlSubscript:
                 return this.renderContainerNS(elem, ns.mathML, "msub");
-            case dom_1.DomType.MmlBase:
-                return this.renderContainerNS(elem, ns.mathML, "mrow");
+            case dom_1.DomType.MmlDegree:
             case dom_1.DomType.MmlSuperArgument:
-                return this.renderContainerNS(elem, ns.mathML, "mn");
             case dom_1.DomType.MmlSubArgument:
                 return this.renderContainerNS(elem, ns.mathML, "mn");
+            case dom_1.DomType.MmlFunctionName:
+                return this.renderContainerNS(elem, ns.mathML, "ms");
             case dom_1.DomType.MmlDelimiter:
                 return this.renderMmlDelimiter(elem);
             case dom_1.DomType.MmlRun:
                 return this.renderMmlRun(elem);
             case dom_1.DomType.MmlNary:
                 return this.renderMmlNary(elem);
+            case dom_1.DomType.MmlPreSubSuper:
+                return this.renderMmlPreSubSuper(elem);
+            case dom_1.DomType.MmlBar:
+                return this.renderMmlBar(elem);
+            case dom_1.DomType.MmlEquationArray:
+                return this.renderMllList(elem);
             case dom_1.DomType.Inserted:
                 return this.renderInserted(elem);
             case dom_1.DomType.Deleted:
@@ -3013,7 +2860,7 @@ section.${c}>article { margin-bottom: auto; }
     renderElements(elems, into) {
         if (elems == null)
             return null;
-        const result = elems.flatMap(e => this.renderElement(e)).filter(e => e != null);
+        var result = elems.flatMap(e => this.renderElement(e)).filter(e => e != null);
         if (into)
             appendChildren(into, result);
         return result;
@@ -3026,7 +2873,7 @@ section.${c}>article { margin-bottom: auto; }
     }
     renderParagraph(elem) {
         var _a, _b, _c, _d;
-        const result = this.createElement("p");
+        var result = this.createElement("p");
         const style = this.findStyle(elem.styleName);
         (_a = elem.tabs) !== null && _a !== void 0 ? _a : (elem.tabs = (_b = style === null || style === void 0 ? void 0 : style.paragraphProps) === null || _b === void 0 ? void 0 : _b.tabs);
         this.renderClass(elem, result);
@@ -3053,7 +2900,7 @@ section.${c}>article { margin-bottom: auto; }
         }
     }
     renderHyperlink(elem) {
-        const result = this.createElement("a");
+        var result = this.createElement("a");
         this.renderChildren(elem, result);
         this.renderStyleValues(elem.cssStyle, result);
         if (elem.href) {
@@ -3067,7 +2914,7 @@ section.${c}>article { margin-bottom: auto; }
         return result;
     }
     renderDrawing(elem) {
-        const result = this.createElement("div");
+        var result = this.createElement("div");
         result.style.display = "inline-block";
         result.style.position = "relative";
         result.style.textIndent = "0px";
@@ -3108,36 +2955,36 @@ section.${c}>article { margin-bottom: auto; }
         return null;
     }
     renderSymbol(elem) {
-        const span = this.createElement("span");
+        var span = this.createElement("span");
         span.style.fontFamily = elem.font;
         span.innerHTML = `&#x${elem.char};`;
         return span;
     }
     renderFootnoteReference(elem) {
-        const result = this.createElement("sup");
+        var result = this.createElement("sup");
         this.currentFootnoteIds.push(elem.id);
         result.textContent = `${this.currentFootnoteIds.length}`;
         return result;
     }
     renderEndnoteReference(elem) {
-        const result = this.createElement("sup");
+        var result = this.createElement("sup");
         this.currentEndnoteIds.push(elem.id);
         result.textContent = `${this.currentEndnoteIds.length}`;
         return result;
     }
     renderTab(elem) {
         var _a;
-        const tabSpan = this.createElement("span");
+        var tabSpan = this.createElement("span");
         tabSpan.innerHTML = "&emsp;";
         if (this.options.experimental) {
             tabSpan.className = this.tabStopClass();
-            const stops = (_a = findParent(elem, dom_1.DomType.Paragraph)) === null || _a === void 0 ? void 0 : _a.tabs;
+            var stops = (_a = findParent(elem, dom_1.DomType.Paragraph)) === null || _a === void 0 ? void 0 : _a.tabs;
             this.currentTabs.push({ stops, span: tabSpan });
         }
         return tabSpan;
     }
     renderBookmarkStart(elem) {
-        const result = this.createElement("span");
+        var result = this.createElement("span");
         result.id = elem.name;
         return result;
     }
@@ -3172,7 +3019,7 @@ section.${c}>article { margin-bottom: auto; }
         this.renderStyleValues(elem.cssStyle, result);
         this.currentVerticalMerge = this.tableVerticalMerges.pop();
         this.currentCellPosition = this.tableCellPositions.pop();
-        return result;
+        return this.createElement("div", { className: 'table-wrapper' }, [result]);
     }
     renderTableColumns(columns) {
         let result = this.createElement("colgroup");
@@ -3218,16 +3065,15 @@ section.${c}>article { margin-bottom: auto; }
         return result;
     }
     renderVmlPicture(elem) {
-        const result = createElement("div");
+        var result = createElement("div");
         this.renderChildren(elem, result);
         return result;
     }
     renderVmlElement(elem) {
         var _a, _b;
-        const container = createSvgElement("svg");
+        var container = createSvgElement("svg");
         container.setAttribute("style", elem.cssStyleText);
-        const result = createSvgElement(elem.tagName);
-        Object.entries(elem.attrs).forEach(([k, v]) => result.setAttribute(k, v));
+        const result = this.renderVmlChildElement(elem);
         if ((_a = elem.imageHref) === null || _a === void 0 ? void 0 : _a.id) {
             (_b = this.document) === null || _b === void 0 ? void 0 : _b.loadDocumentImage(elem.imageHref.id, this.currentPart).then(x => result.setAttribute("href", x));
         }
@@ -3238,6 +3084,19 @@ section.${c}>article { margin-bottom: auto; }
             container.setAttribute("height", `${Math.ceil(bb.y + bb.height)}`);
         });
         return container;
+    }
+    renderVmlChildElement(elem) {
+        const result = createSvgElement(elem.tagName);
+        Object.entries(elem.attrs).forEach(([k, v]) => result.setAttribute(k, v));
+        for (let child of elem.children) {
+            if (child.type == dom_1.DomType.VmlElement) {
+                result.appendChild(this.renderVmlChildElement(child));
+            }
+            else {
+                result.appendChild(...(0, utils_1.asArray)(this.renderElement(child)));
+            }
+        }
+        return result;
     }
     renderMmlRadical(elem) {
         var _a;
@@ -3257,30 +3116,60 @@ section.${c}>article { margin-bottom: auto; }
         return createElementNS(ns.mathML, "mrow", null, children);
     }
     renderMmlNary(elem) {
-        var _a;
+        var _a, _b;
         const children = [];
         const grouped = (0, utils_1.keyBy)(elem.children, x => x.type);
         const sup = grouped[dom_1.DomType.MmlSuperArgument];
         const sub = grouped[dom_1.DomType.MmlSubArgument];
         const supElem = sup ? createElementNS(ns.mathML, "mo", null, (0, utils_1.asArray)(this.renderElement(sup))) : null;
         const subElem = sub ? createElementNS(ns.mathML, "mo", null, (0, utils_1.asArray)(this.renderElement(sub))) : null;
-        if ((_a = elem.props) === null || _a === void 0 ? void 0 : _a.char) {
-            const charElem = createElementNS(ns.mathML, "mo", null, [elem.props.char]);
-            if (supElem || subElem) {
-                children.push(createElementNS(ns.mathML, "munderover", null, [charElem, subElem, supElem]));
-            }
-            else if (supElem) {
-                children.push(createElementNS(ns.mathML, "mover", null, [charElem, supElem]));
-            }
-            else if (subElem) {
-                children.push(createElementNS(ns.mathML, "munder", null, [charElem, subElem]));
-            }
-            else {
-                children.push(charElem);
-            }
+        const charElem = createElementNS(ns.mathML, "mo", null, [(_b = (_a = elem.props) === null || _a === void 0 ? void 0 : _a.char) !== null && _b !== void 0 ? _b : '\u222B']);
+        if (supElem || subElem) {
+            children.push(createElementNS(ns.mathML, "munderover", null, [charElem, subElem, supElem]));
+        }
+        else if (supElem) {
+            children.push(createElementNS(ns.mathML, "mover", null, [charElem, supElem]));
+        }
+        else if (subElem) {
+            children.push(createElementNS(ns.mathML, "munder", null, [charElem, subElem]));
+        }
+        else {
+            children.push(charElem);
         }
         children.push(...this.renderElements(grouped[dom_1.DomType.MmlBase].children));
         return createElementNS(ns.mathML, "mrow", null, children);
+    }
+    renderMmlPreSubSuper(elem) {
+        const children = [];
+        const grouped = (0, utils_1.keyBy)(elem.children, x => x.type);
+        const sup = grouped[dom_1.DomType.MmlSuperArgument];
+        const sub = grouped[dom_1.DomType.MmlSubArgument];
+        const supElem = sup ? createElementNS(ns.mathML, "mo", null, (0, utils_1.asArray)(this.renderElement(sup))) : null;
+        const subElem = sub ? createElementNS(ns.mathML, "mo", null, (0, utils_1.asArray)(this.renderElement(sub))) : null;
+        const stubElem = createElementNS(ns.mathML, "mo", null);
+        children.push(createElementNS(ns.mathML, "msubsup", null, [stubElem, subElem, supElem]));
+        children.push(...this.renderElements(grouped[dom_1.DomType.MmlBase].children));
+        return createElementNS(ns.mathML, "mrow", null, children);
+    }
+    renderMmlGroupChar(elem) {
+        const tagName = elem.props.verticalJustification === "bot" ? "mover" : "munder";
+        const result = this.renderContainerNS(elem, ns.mathML, tagName);
+        if (elem.props.char) {
+            result.appendChild(createElementNS(ns.mathML, "mo", null, [elem.props.char]));
+        }
+        return result;
+    }
+    renderMmlBar(elem) {
+        const result = this.renderContainerNS(elem, ns.mathML, "mrow");
+        switch (elem.props.position) {
+            case "top":
+                result.style.textDecoration = "overline";
+                break;
+            case "bottom":
+                result.style.textDecoration = "underline";
+                break;
+        }
+        return result;
     }
     renderMmlRun(elem) {
         const result = createElementNS(ns.mathML, "ms");
@@ -3289,14 +3178,33 @@ section.${c}>article { margin-bottom: auto; }
         this.renderChildren(elem, result);
         return result;
     }
-    renderStyleValues(style, output) {
-        Object.assign(output.style, style);
+    renderMllList(elem) {
+        const result = createElementNS(ns.mathML, "mtable");
+        this.renderClass(elem, result);
+        this.renderStyleValues(elem.cssStyle, result);
+        const childern = this.renderChildren(elem);
+        for (let child of this.renderChildren(elem)) {
+            result.appendChild(createElementNS(ns.mathML, "mtr", null, [
+                createElementNS(ns.mathML, "mtd", null, [child])
+            ]));
+        }
+        return result;
     }
-    renderClass(input, output) {
+    renderStyleValues(style, ouput) {
+        for (let k in style) {
+            if (k.startsWith("$")) {
+                ouput.setAttribute(k.slice(1), style[k]);
+            }
+            else {
+                ouput.style[k] = style[k];
+            }
+        }
+    }
+    renderClass(input, ouput) {
         if (input.className)
-            output.className = input.className;
+            ouput.className = input.className;
         if (input.styleName)
-            output.classList.add(this.processStyleName(input.styleName));
+            ouput.classList.add(this.processStyleName(input.styleName));
     }
     findStyle(styleName) {
         var _a;
@@ -3311,6 +3219,8 @@ section.${c}>article { margin-bottom: auto; }
     styleToString(selectors, values, cssText = null) {
         let result = `${selectors} {\r\n`;
         for (const key in values) {
+            if (key.startsWith('$'))
+                continue;
             result += `  ${key}: ${values[key]};\r\n`;
         }
         if (cssText)
@@ -3326,14 +3236,15 @@ section.${c}>article { margin-bottom: auto; }
             "tab": "\\9",
             "space": "\\a0",
         };
-        const result = text.replace(/%\d*/g, s => {
+        var result = text.replace(/%\d*/g, s => {
             let lvl = parseInt(s.substring(1), 10) - 1;
             return `"counter(${this.numberingCounter(id, lvl)}, ${numformat})"`;
         });
         return `"${result}${(_a = suffMap[suff]) !== null && _a !== void 0 ? _a : ""}"`;
     }
     numFormatToCssValue(format) {
-        const mapping = {
+        var _a;
+        var mapping = {
             none: "none",
             bullet: "disc",
             decimal: "decimal",
@@ -3369,7 +3280,7 @@ section.${c}>article { margin-bottom: auto; }
             taiwaneseCountingThousand: "cjk-ideographic",
             taiwaneseDigital: "cjk-decimal",
         };
-        return mapping[format] || format;
+        return (_a = mapping[format]) !== null && _a !== void 0 ? _a : format;
     }
     refreshTabStops() {
         if (!this.options.experimental)
@@ -3391,7 +3302,7 @@ function createSvgElement(tagName, props, children) {
     return createElementNS(ns.svg, tagName, props, children);
 }
 function createElementNS(ns, tagName, props, children) {
-    const result = ns ? document.createElementNS(ns, tagName) : document.createElement(tagName);
+    var result = ns ? document.createElementNS(ns, tagName) : document.createElement(tagName);
     Object.assign(result, props);
     children && appendChildren(result, children);
     return result;
@@ -3409,7 +3320,7 @@ function appendComment(elem, comment) {
     elem.appendChild(document.createComment(comment));
 }
 function findParent(elem, type) {
-    let parent = elem.parent;
+    var parent = elem.parent;
     while (parent != null && parent.type != type)
         parent = parent.parent;
     return parent;
@@ -3518,10 +3429,6 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WmlEndnote = exports.WmlFootnote = exports.WmlBaseNote = void 0;
 const dom_1 = __webpack_require__(/*! ../document/dom */ "./src/document/dom.ts");
 class WmlBaseNote {
-    constructor() {
-        this.children = [];
-        this.cssStyle = {};
-    }
 }
 exports.WmlBaseNote = WmlBaseNote;
 class WmlFootnote extends WmlBaseNote {
@@ -3616,7 +3523,7 @@ exports.NumberingPart = NumberingPart;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.parseNumberingBulletPicture = exports.parseNumberingLevelOverride = exports.parseNumberingLevel = exports.parseAbstractNumbering = exports.parseNumbering = exports.parseNumberingPart = void 0;
+exports.parseNumberingBulletPicture = exports.parseNumberingLevelOverrride = exports.parseNumberingLevel = exports.parseAbstractNumbering = exports.parseNumbering = exports.parseNumberingPart = void 0;
 const paragraph_1 = __webpack_require__(/*! ../document/paragraph */ "./src/document/paragraph.ts");
 const run_1 = __webpack_require__(/*! ../document/run */ "./src/document/run.ts");
 function parseNumberingPart(elem, xml) {
@@ -3652,7 +3559,7 @@ function parseNumbering(elem, xml) {
                 result.abstractId = xml.attr(e, "val");
                 break;
             case "lvlOverride":
-                result.overrides.push(parseNumberingLevelOverride(e, xml));
+                result.overrides.push(parseNumberingLevelOverrride(e, xml));
                 break;
         }
     }
@@ -3724,7 +3631,7 @@ function parseNumberingLevel(elem, xml) {
     return result;
 }
 exports.parseNumberingLevel = parseNumberingLevel;
-function parseNumberingLevelOverride(elem, xml) {
+function parseNumberingLevelOverrride(elem, xml) {
     let result = {
         level: xml.intAttr(elem, 'ilvl')
     };
@@ -3740,11 +3647,11 @@ function parseNumberingLevelOverride(elem, xml) {
     }
     return result;
 }
-exports.parseNumberingLevelOverride = parseNumberingLevelOverride;
+exports.parseNumberingLevelOverrride = parseNumberingLevelOverrride;
 function parseNumberingBulletPicture(elem, xml) {
-    const pict = xml.element(elem, "pict");
-    const shape = pict && xml.element(pict, "shape");
-    const imagedata = shape && xml.element(shape, "imagedata");
+    var pict = xml.element(elem, "pict");
+    var shape = pict && xml.element(pict, "shape");
+    var imagedata = shape && xml.element(shape, "imagedata");
     return imagedata ? {
         id: xml.attr(elem, "numPicBulletId"),
         referenceId: xml.attr(imagedata, "id"),
@@ -4098,7 +4005,7 @@ function isObject(item) {
 }
 exports.isObject = isObject;
 function isString(item) {
-    return item && typeof item === 'string' || item instanceof String;
+    return typeof item === 'string' || item instanceof String;
 }
 exports.isString = isString;
 function mergeDeep(target, ...sources) {
@@ -4153,15 +4060,15 @@ exports.parseVmlElement = exports.VmlElement = void 0;
 const common_1 = __webpack_require__(/*! ../document/common */ "./src/document/common.ts");
 const dom_1 = __webpack_require__(/*! ../document/dom */ "./src/document/dom.ts");
 const xml_parser_1 = __webpack_require__(/*! ../parser/xml-parser */ "./src/parser/xml-parser.ts");
-class VmlElement {
+class VmlElement extends dom_1.OpenXmlElementBase {
     constructor() {
+        super(...arguments);
         this.type = dom_1.DomType.VmlElement;
         this.attrs = {};
-        this.chidren = [];
     }
 }
 exports.VmlElement = VmlElement;
-function parseVmlElement(elem) {
+function parseVmlElement(elem, parser) {
     var result = new VmlElement();
     switch (elem.localName) {
         case "rect":
@@ -4177,6 +4084,10 @@ function parseVmlElement(elem) {
             break;
         case "shape":
             result.tagName = "g";
+            break;
+        case "textbox":
+            result.tagName = "foreignObject";
+            Object.assign(result.attrs, { width: '100%', height: '100%' });
             break;
         default:
             return null;
@@ -4215,9 +4126,12 @@ function parseVmlElement(elem) {
                     title: xml_parser_1.default.attr(el, "title"),
                 };
                 break;
+            case "txbxContent":
+                result.children.push(...parser.parseBodyElements(el));
+                break;
             default:
-                const child = parseVmlElement(el);
-                child && result.chidren.push(child);
+                const child = parseVmlElement(el, parser);
+                child && result.children.push(child);
                 break;
         }
     }
@@ -4411,16 +4325,6 @@ exports.deobfuscate = deobfuscate;
 
 /***/ }),
 
-/***/ "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 100%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27m0,75 l5,0 l5,25 l10,-100%27 stroke=%27black%27 fill=%27none%27 vector-effect=%27non-scaling-stroke%27/%3E%3C/svg%3E":
-/*!********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 100%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27m0,75 l5,0 l5,25 l10,-100%27 stroke=%27black%27 fill=%27none%27 vector-effect=%27non-scaling-stroke%27/%3E%3C/svg%3E ***!
-  \********************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module) => {
-
-module.exports = "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 100%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27m0,75 l5,0 l5,25 l10,-100%27 stroke=%27black%27 fill=%27none%27 vector-effect=%27non-scaling-stroke%27/%3E%3C/svg%3E";
-
-/***/ }),
-
 /***/ "jszip":
 /*!**************************************************************************************!*\
   !*** external {"root":"JSZip","commonjs":"jszip","commonjs2":"jszip","amd":"jszip"} ***!
@@ -4445,7 +4349,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_jszip__;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
+/******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -4456,76 +4360,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_jszip__;
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"docx-preview": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
-/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

@@ -29,7 +29,7 @@ function onFileChange(e: any) {
 /**
  * 重新渲染
  */
-async function reload() {
+async function render() {
   const iframe = IFrame.query('iframe', true)
 
   for (let i = 0, l = docStore.docs.length; i < l; i++) {
@@ -118,16 +118,16 @@ function preview() {
     <button
         class="btn btn-success px-4"
         :disabled="docStore.docs.length === 0"
-        @click="reload"
+        @click="render"
     >
-      Reload
+      Render
     </button>
     <button
         class="btn btn-success px-4"
         :disabled="docStore.docs.length === 0"
         @click="exportToHtml"
     >
-      Export
+      Download
     </button>
     <button
         class="btn btn-secondary px-4"
