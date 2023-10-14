@@ -38,7 +38,9 @@ watch(
         </div>
         <div class="modal-body d-flex flex-column align-items-center">
           <p>
-            预览地址: <a :href="url" target="_blank">{{ url }}</a>
+            <span>预览地址:</span><br>
+            <a :href="url" target="_blank">{{ url }}</a><br>
+            <span>(有效期：2个小时)</span>
           </p>
           <img class="w-50" :src="qrcodeUrl" alt=""/>
         </div>
