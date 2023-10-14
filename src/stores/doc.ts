@@ -13,7 +13,7 @@ export const useDocStore = defineStore('DocStore', () => {
    */
   async function preview() {
     // 调用接口获取token
-    const {data: token} = await fetch("http://localhost:8000/api/qiniu/token").then(resp => resp.json())
+    const {data: token} = await fetch("https://apix.deno.dev/api/qiniu/token").then(resp => resp.json())
     const iframe = IFrame.query('iframe')
     // 取第一个文档的title
     const title = docs[0].file.name
