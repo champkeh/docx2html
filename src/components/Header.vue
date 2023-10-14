@@ -6,6 +6,7 @@ import {ref} from 'vue'
 import {renderDoc} from "@/utils";
 import {IFrame} from "@/stores/iframe";
 import {downloadHtml} from "@/utils/file";
+import Modal from "@/components/Modal.vue";
 
 const docStore = useDocStore()
 
@@ -51,7 +52,7 @@ async function render() {
 /**
  * 导出成 html 文件
  */
-function exportToHtml() {
+function download() {
   const iframe = IFrame.query('iframe')
   // 取第一个文档的title
   const title = docStore.docs[0].file.name
@@ -125,7 +126,7 @@ function preview() {
     <button
         class="btn btn-success px-4"
         :disabled="docStore.docs.length === 0"
-        @click="exportToHtml"
+        @click="download"
     >
       Download
     </button>
@@ -143,4 +144,6 @@ function preview() {
       Preview
     </button>
   </div>
+
+  <Modal v-model:show="modalIsOpen" :url="url" />
 </template>

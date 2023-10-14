@@ -22,7 +22,7 @@ export function renderDoc(doc: IDocItem, hintCls?: string) {
             // 这里最好等待一段时间，让文档中的资源加载完成
             await sleep(100)
 
-            console.log(doc)
+            console.debug(doc)
 
             return [bodyContainer, styleContainer]
         })
